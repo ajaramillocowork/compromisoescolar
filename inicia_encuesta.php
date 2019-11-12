@@ -141,7 +141,7 @@
                         </td>
                         <td align="left" valign="center"  width="50%" style="padding-left: 30px; padding-top: 40px;">
                             <div id="styled_video_container">
-                                <video src="assets/video/promocion.mp4" type="video/mp4" controls poster="assets/img/img_video.png" id="styled_video" preload="metadata" loop>
+                                <video src="assets/video/promocion.mp4" type="video/mp4" controls poster="assets/img/promocion_poster.png" id="styled_video" preload="metadata" loop>
                             </div>
                         </td>
                     </tr>

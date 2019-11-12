@@ -14,14 +14,14 @@ if (isset($_SESSION['user'])) {
         </head>
         <body style="background: #418bcc;">
             <!-- Menu-->
-            <nav class="navbar navbar-light">
-                <a class="navbar-brand" href="#"><img src="assets/img/logo.png"/></a>
+            <nav class="navbar navbar-light" style="background-color: white">
+                <a class="navbar-brand" href="#"><img src="assets/img/logo_compromiso_escolar.png"/></a>
                 <span class="navbar-text"><a href="salir.php"><img src="assets/img/salir.png"></a></span>
             </nav>
             <!--Fin Menu-->
           
                
-                    <div class="col-md-12">   
+                    <div class="col-md-12" style="padding-top: 2rem">
                         <div class="row mb-5">
                             <div class="col-md-4">
                             <a class="text-white" href="index.php" data-toggle="tooltip" data-placement="bottom" title="Volver"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
