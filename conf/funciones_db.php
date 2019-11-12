@@ -132,15 +132,15 @@ function vista_sostenedores($id_estableci){
         if($cantidad >= 1){
             echo '<div class="table-responsive"><table id="tabla_sostenedor" class="table table-striped">'
             .'<thead class="text-white">'
-            .'<tr><th>Codigo</th>'
+            .'<tr><th>Código</th>'
             .'<th>Nombre Sostenedor</th>'
             .'<th>Apellido Sostenedor</th>'
             .'<th>Run Sostenedor</th>'
             .'<th>Fecha Registro</th>'
             .'<th>Establecimiento</th>'
-            .'<th>Cod usuario</th>'
+            .'<th>Cód. Usuario</th>'
             .'<th>Usuario</th>'
-            .'<th>Cotraseña</th>'
+            .'<th>Contraseña</th>'
             .'<th>Editar</th>'
             .'</tr></thead><tbody>';
         foreach($query AS $fila){
@@ -257,16 +257,16 @@ function vista_profesores($id_establecimiento){
        if($cantidad >= 1){
            echo '<div class="table-responsive"><table id="tabla_docente" class="table table-striped">'
            .'<thead class="text-white">'
-           .'<tr><th>Codigo</th>'
+           .'<tr><th>Código</th>'
            .'<th>Nombre Docente</th>'
            .'<th>Apellido Docente</th>'
            .'<th>Run Docente</th>'
            .'<th>Email Docente</th>' 
            .'<th>Curso</th>'    
            .'<th>Nivel</th>'  
-           .'<th>cod Usuario</th>'   
+           .'<th>Cód. Usuario</th>'
            .'<th>Usuario</th>'      
-           .'<th>contraseña</th>'  
+           .'<th>Contraseña</th>'
            //.'<th>Especialidad</th>' 
            .'<th>Editar</th>'
            .'</tr></thead><tbody>';
@@ -1054,7 +1054,7 @@ function select_docente($id_docente)
       $con = null;        
     
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-        echo '<option value="' .$row["id_curso"].','.$row["id_nivel"]. '">' .$row["nom_curso"]. '-->'.$row["nom_nivel"].'</option>';
+        echo '<option value="' .$row["id_curso"].','.$row["id_nivel"]. '">' .$row["nom_curso"].'</option>';
         }
   
 }
@@ -10607,6 +10607,7 @@ function factores_compromiso_escolar_suma($token_estudiante)
 function tipo_usuario(){
     try{
         $con = connectDB_demos();
+
         $query = $con->prepare("SELECT id_rol, display_nombre_rol FROM ce_roles WHERE id_rol IN (1,2,3)");
         $query->execute();        
         echo '<select name="tipo_usuario" id="tipo_usuario" class="form-control">';      

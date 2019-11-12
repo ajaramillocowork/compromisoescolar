@@ -205,51 +205,51 @@ function validar_campos($row0, $row1, $row2, $row3, $row4, $row5, $row6, $row7, 
     $cuenta = 0;
 
     if ($row0 == null) {
-        echo 'El nombre del Estudiante no puede estar vacio';
+        echo 'El nombre del estudiante no puede estar vacío';
         exit;
     } elseif ($row1 == NULL) {
-        echo 'El apellido del estudiante no puede estar Vacio';
+        echo 'El apellido del estudiante no puede estar vacío';
         exit;
     } elseif ($row2 == NULL) {
-        echo 'La Fecha de Nacimiento del Estudiante no puede estar Vacia';
+        echo 'La fecha de nacimiento del Estudiante no puede estar vacía';
         exit;
     } elseif ($row3 == NULL) {
-        echo 'El Run del Estudiante no puede estar Vacia';
+        echo 'El Run del estudiante no puede estar vacáa';
         exit;
     } elseif ($row4 == NULL) {
         if ($row4 == 0){
             $$row4 = 0;
         }else{
-             echo 'El Digito Verificador del Run del Estudiante no puede estar Vacia';
+             echo 'El Dígito verificador del Run del estudiante no puede estar vacío';
         exit;
         }
        
     } elseif ($cuenta == 1 && $row5 == NULL) {
-        echo 'El campo establecimiento no puede estar Vacio';
+        echo 'El campo Establecimiento no puede estar vacío';
         exit;
     } elseif ($cuenta == 1 && $row6 == NULL) {
-        echo 'El Rbd del Establecimiento no puede estar Vacia';
+        echo 'El RBD del establecimiento no puede estar vacío';
         exit;
     } elseif ($cuenta == 1 && $row7 == NULL) {
-        echo 'El campo Curso no puede estar Vacia';
+        echo 'El campo Curso no puede estar vacío';
         exit;
     } elseif ($row8 == NULL) {
-        echo 'El Campo ciudad no puede quedar Vacio';
+        echo 'El Campo Ciudad no puede quedar vacío';
         exit;
     } elseif ($cuenta == 1 && $row9 == NULL) {
-        echo 'Los nombres del Docente no puede quedar Vacio';
+        echo 'Los nombres del docente no puede quedar vacíos';
         exit;
     } elseif ($cuenta == 1 && $row10 == NULL) {
-        echo 'Los Apellidos de los apoderados no puede estar Vacia';
+        echo 'Los apellidos de los apoderados no puede estar vacíos';
         exit;
     } elseif ($cuenta == 1 && $row11 == NULL) {
-        echo 'El Run del Docente no puede estar Vacia';
+        echo 'El Run del docente no puede estar vacío';
         exit;
     } elseif ($cuenta == 1 && $row12 == NULL) {
-        echo 'El Digito Verificador del Docente no puede estar Vacia';
+        echo 'El Digito verificador del docente no puede estar vacío';
         exit;
     } elseif ($cuenta == 1 && $row13 == NULL) {
-        echo 'El Email del Docente no puede quedar Vacio';
+        echo 'El email del docente no puede quedar vacío';
         exit;
     }
 }

@@ -10,7 +10,7 @@ require_once 'conf/funciones_db.php';
 $id_establecimiento = $_SESSION["identificador_estable"];
 $id_docente = $_POST["id_profesor"];
 $id_curso_nivel = explode(",", $_POST["id_curso"]);
-$id_pais =  $_SESSION["pais_establecimiento"];
+$id_pais =  $_SESSION["pais_establecimiento"] ? $_SESSION["pais_establecimiento"] : 1;
 $id_curso = $id_curso_nivel[0];
 $id_nivel = $id_curso_nivel[1];
 

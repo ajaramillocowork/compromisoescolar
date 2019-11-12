@@ -20,13 +20,13 @@
 </head>
 <body style="background: #418bcc;">
 	<!-- Menu-->
-	<nav class="navbar navbar-light">
-		<a class="navbar-brand" href="#"><img src="assets/img/logo.png" /></a>
+	<nav class="navbar navbar-light" style="background-color: white">
+		<a class="navbar-brand" href="/modulos.php"><img src="assets/img/logo_compromiso_escolar.png" /></a>
 		<span class="navbar-text"><a href="salir.php"><img
 					src="assets/img/salir.png"></a></span>
 	</nav>
 	<!--Fin Menu-->
-	<div class="conta">
+	<div class="conta" style="padding-top: 2rem">
 
 		<div class="row mb-3">
 			<h4 class="text-white">Gestión de Establecimientos</h4>
@@ -38,7 +38,7 @@
 					<li class="nav-item"><a class="nav-link active bg-success" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Docentes</a></li>
 					<li class="nav-item"><a class="nav-link bg-success" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Cursos</a></li>
 					<li class="nav-item"><a class="nav-link bg-success" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Sostenedores</a></li>
-					<li class="nav-item"><a class="nav-link bg-success" href="modulos"><i
+					<li class="nav-item"><a class="nav-link bg-success" href="/modulos.php"><i
 								class="fa fa-arrow-left" aria-hidden="true"></i> Volver</a></li>
 				</ul>
 				<div class="tab-content" id="myTabContent">

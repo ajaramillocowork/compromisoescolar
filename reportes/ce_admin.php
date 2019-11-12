@@ -21,7 +21,7 @@
 
       <div class="col-md-6">
 <h2 class="text-white">¡Bienvenidos/as!</h2>
-<p class="text-justify text-white texto-informes">En este sitio tendrás acceso a las opciones de administración de la plataforma. Puedes crear los token de acceso a los alumnos(as) a la encuesta, administrar los usuarios que acceden a reportes y crear los cursos participantes. Todos los datos ingresados a este módulo se van relacionando de manera de tener un ùnico repositorio de claves de acceso y personas que están participando de la información que entrega la plataforma de compromiso escolar.</p>
+<p class="text-justify text-white texto-informes">En este sitio tendrás acceso a las opciones de administración de la plataforma. Puedes crear los token de acceso a los alumnos(as) a la encuesta, administrar los usuarios que acceden a reportes y crear los cursos participantes. Todos los datos ingresados a este módulo se van relacionando de manera de tener un único repositorio de claves de acceso y personas que están participando de la información que entrega la plataforma de compromiso escolar.</p>
 <!--<div class="imagen_estudiantes"></div>-->
       </div>
 
