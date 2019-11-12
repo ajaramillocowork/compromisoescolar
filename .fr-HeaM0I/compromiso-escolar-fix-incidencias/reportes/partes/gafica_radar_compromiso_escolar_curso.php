@@ -1,3 +1,0 @@
-grafico_nivel_apoyo_familia
-grafico_nivel_apoyo_profesores
-grafico_nivel_apoyo_pares
