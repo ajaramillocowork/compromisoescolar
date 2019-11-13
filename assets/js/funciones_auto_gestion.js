@@ -398,7 +398,7 @@ function validar_extension() {
                             $("#file").val('');
                         }
                         else if(extension.estado === "3"){
-                            alertify.alert("Notificación","Algunos campos el archivo se encuentran vacios");
+                            alertify.alert("Notificación","Algunos campos el archivo se encuentran vacíos");
                             $("#file").val('');
                         }
                         else if(extension.estado === "4"){
@@ -984,8 +984,10 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
                                var respuesta = (JSON.parse(response));
                             if(respuesta.estado === "1"){                                
                                     alertify.success("<div class='text-white text-center'>Establecimiento Guardado Exitosamente</div>");
-                                    $('#estable_lista').load("php/lista_establecimientos.php");                                
-                                
+                                    $('#estable_lista').load("php/lista_establecimientos.php");
+                                    $("#myModal").modal('hide');//ocultamos el modal
+                                    $('body').removeClass('modal-open');//eliminamos la clase del body para poder hacer scroll
+                                    $('.modal-backdrop').remove();
     
                             }else if(respuesta.estado === "0"){
                                 alertify.error("<div class='text-white text-center'>El establecimiento ya esta registrado</div>");
@@ -999,12 +1001,9 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 
                              }
                 , function(){
-                    
                 });
-                          
-                                
-                        });
-                    });
+                });
+                });
                 })
             }
 
