@@ -111,7 +111,7 @@ Todos los datos ingresados a este módulo se van relacionando de manera de tener
 			<div class="col-md-6 hvr hvr-grow mb-2" id="lista_establecimientos">
 					<div class="cuadrado-modulos" style="cursor: pointer">
 					<i class="fa fa-pie-chart fa-3x center-icono text-success" aria-hidden="true"></i>						
-						<p>Establecimientos</p> 
+						<p>Establecimientos</p>
 					</div>
 				</div>
 				<div class="col-md-6  hvr hvr-grow mb-2" id="editar_preguntas">
