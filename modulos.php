@@ -107,11 +107,11 @@ Todos los datos ingresados a este módulo se van relacionando de manera de tener
                 
 				<?php  if( $tipo_usuario == 4){?>
 					<div class="centrado">
-			<div class="row">
+			<div class="row" style="padding-top: 12rem">
 			<div class="col-md-6 hvr hvr-grow mb-2" id="lista_establecimientos">
 					<div class="cuadrado-modulos" style="cursor: pointer">
 					<i class="fa fa-pie-chart fa-3x center-icono text-success" aria-hidden="true"></i>						
-						<p>Establecimientos</p> 
+						<p>Establecimientos</p>
 					</div>
 				</div>
 				<div class="col-md-6  hvr hvr-grow mb-2" id="editar_preguntas">
@@ -178,7 +178,7 @@ Todos los datos ingresados a este módulo se van relacionando de manera de tener
 		
 				<?php  if( $tipo_usuario == 4){?>
 					<div class="centrado">
-			<div class="row">
+			<div class="row" style="padding-top: 12rem">
 			<div class="col-md-6 hvr hvr-grow mb-2" id="lista_establecimientos">
 					<div class="cuadrado-modulos" style="cursor: pointer">
 					<i class="fa fa-pie-chart fa-3x center-icono text-success" aria-hidden="true"></i>						

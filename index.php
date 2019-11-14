@@ -94,7 +94,7 @@ if(isset($_SESSION['user'])){
                             </div>
                             <div class="col-md-3">
                                 <div class="excel">
-                                    <a href="descarga_archivo.php" class="text-white">Descargar Excel de ejemplo</a>
+                                    <a href="/assets/img/imagen_ejemplo_xlsx.png" target="_blank" class="text-white">Descargar Excel de ejemplo</a>
                                 </div>
                             </div>
                             <div class="col-md-3">
