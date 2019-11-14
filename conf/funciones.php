@@ -80,16 +80,21 @@ function select_token_pdf($establecimiento, $rbd, $curso) {
 function select_token_pdf_copia($id_establecimiento, $id_docente, $curso) {
     $conexion = connectDB_demos();
 
-    $query = $conexion->query("SELECT a.ce_participantes_nombres AS nombres, a.ce_participantes_apellidos AS apellidos, a.ce_participanes_token AS token,
+    $sql = "SELECT a.ce_participantes_nombres AS nombres, a.ce_participantes_apellidos AS apellidos, a.ce_participanes_token AS token,
     b.ce_establecimiento_nombre AS nom_estable, c.ce_curso_nombre AS nom_curso
     FROM ce_participantes a
     INNER JOIN ce_establecimiento b ON a.ce_establecimiento_id_ce_establecimiento = b.id_ce_establecimiento
     INNER JOIN ce_curso c ON a.ce_curso_id_ce_curso = c.id_ce_curso
-    WHERE a.ce_establecimiento_id_ce_establecimiento = '$id_establecimiento' AND a.ce_docente_id_ce_docente = '$id_docente' AND a.ce_curso_id_ce_curso = '$curso'");
+    WHERE a.ce_establecimiento_id_ce_establecimiento = '$id_establecimiento' AND a.ce_docente_id_ce_docente = '$id_docente' AND a.ce_curso_id_ce_curso = '$curso'";
+    $query = $conexion->query($sql);
+    
+    $query2 = $conexion->query($sql);
+    
     $conexion = NULL;
     ob_start();
 
-    $consulta = $query->fetch(PDO::FETCH_ASSOC);
+    $consulta = $query2->fetch(PDO::FETCH_ASSOC);
+   
 
     try {
         require_once 'assets/librerias/vendor/autoload.php';
@@ -150,6 +155,9 @@ function select_token_pdf_admin($id_establecimiento, $id_docente, $curso) {
     ob_start();
 
     $consulta = $query->fetch(PDO::FETCH_ASSOC);
+
+
+    
 
     try {
         require_once 'assets/librerias/vendor/autoload.php';
@@ -252,6 +260,7 @@ function validar_campos($row0, $row1, $row2, $row3, $row4, $row5, $row6, $row7, 
         echo 'El email del docente no puede quedar vacío';
         exit;
     }
+    
 }
 
 
