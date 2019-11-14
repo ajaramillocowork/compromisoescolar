@@ -27,7 +27,7 @@ if (isset($_SESSION['user'])) {
                             <a class="text-white" href="index.php" data-toggle="tooltip" data-placement="bottom" title="Volver"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
                             </div>
                             <div class="col-md-4">
-                              <div class="text-center text-white"><h3><?php echo $resultado["nomcurso"]." (".$resultado["estudiantes"].")";?></h3></div>
+                              <div class="text-center text-white"><h3><?php echo $resultado["nomcurso"];?></h3></div>
                              
                             </div>
                             <div class="col-md-4 text-right">
