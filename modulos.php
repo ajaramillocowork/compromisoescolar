@@ -9,13 +9,12 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title></title>
-        <?php
-
-include "assets/css/css.php";
-
+    <head>
+    <meta charset="utf-8">
+    <link rel=”shortcut icon” type=”image/png” href=”assets/img/favicon.png”/>
+    <title></title>
+    <?php
+        include "assets/css/css.php";
     ?>
 <style type="text/css">
     	.btn_cuadrado:hover { 
