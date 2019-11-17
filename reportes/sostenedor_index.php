@@ -412,7 +412,6 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                         <tr width="100%">
                             <td align="right" width="50%">
                                 <h3 style="color: white;"><?php echo $_SESSION["profesor_nombres"];?></h3>
-                       
                             </td>
                             <td align="right" width="50%">
                                 <button id="btn_cerrar_session" style="text-decoration: none; background: transparent; width: 100%; height: 100%;  background-repeat: no-repeat; border-radius: 35px; border: none; cursor:pointer; overflow: hidden; outline:none; background-position: center;">
@@ -494,7 +493,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                                             <tbody>
                                                 <tr valign="center">
                                                     <td style="padding-left: 10px; font-weight: bold;" align="left" width="100%">
-                                                        <h4><strong>Grafica de Dispersión (Basica)</strong></h4>
+                                                        <h4><strong>Grafica de Dispersión (Básica)</strong></h4>
                                                     </td>
                                                 </tr>      
                                             </tbody>
@@ -710,7 +709,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
     }
 
     const labels = function (chart) {
-        chart.renderer.label('Alto compromiso escolar y Factores contextuales', window.value - 200, 40)
+        chart.renderer.label('Alto compromiso escolar y factores contextuales', window.value - 200, 40)
             .attr({
                 fill: 'rgb(206, 225, 255)',
                 padding: 1,
@@ -722,7 +721,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                 border: '10px'
             })
             .add();
-        chart.renderer.label('Alto compromiso escolar y bajos Factores contextuales', 70, 40)
+        chart.renderer.label('Alto compromiso escolar y bajos factores contextuales', 70, 40)
             .attr({
                 fill: 'rgb(206, 225, 255)',
                 padding: 1,
@@ -734,7 +733,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                 width: '200px'
             })
             .add();
-        chart.renderer.label('Bajo compromiso escolar y bajos Factores contextuales', 70, 390)
+        chart.renderer.label('Bajo compromiso escolar y bajos factores contextuales', 70, 390)
             .attr({
                 fill: 'rgb(206, 225, 255)',
                 padding: 1,
@@ -746,7 +745,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                 width: '200px'
             })
             .add();
-        chart.renderer.label('Bajo compromiso escolar y Altos Factores contextuales', window.value - 200, 390)
+        chart.renderer.label('Bajo compromiso escolar y altos Factores contextuales', window.value - 200, 390)
             .attr({
                 fill: 'rgb(206, 225, 255)',
                 padding: 1,

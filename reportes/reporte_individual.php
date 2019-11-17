@@ -183,7 +183,7 @@ tenga información sobre cómo estos factores afectan el compromiso escolar. Den
 incluyen las dimensiones de contextos: Apoyo recibido de la FAMILIA, Apoyo recibido de PARES y Apoyo recibido de
 PROFESORES.</p>
 
-<p><span>Apoyo Familiar:</span> Se refiere a que los/las estudiantes perciben ser apoyados por sus profesores y/o sus familias. La
+<p><span>Apoyo Familia:</span> Se refiere a que los/las estudiantes perciben ser apoyados por sus profesores y/o sus familias. La
 familia del (la) estudiante suele apoyar a su hijo(a) en el proceso de aprendizaje y cuando tiene problemas,
 ayudándolo con las tareas, conversando lo que sucede en la escuela, animándolo y motivándolo a trabajar bien. El
 (Ia) estudiante se siente motivado por sus profesores para aprender y que estos lo ayudan cuando tiene algún
@@ -196,7 +196,7 @@ integración escolar y frente a desafíos escolares y/o cuando tiene una dificul
 
 <p><span>Apoyo Profesores: </span> Se define como la percepción del (la) estudiante acerca del apoyo que recibe de sus profesores.</p>
 
-<div class="subtitulos pt-1">2.1. Apoyo Familiar</div>
+<div class="subtitulos pt-1">2.1. Apoyo Familia</div>
 
 <table style="border-collapse:collapse; width: 800px;">
 <thead>
