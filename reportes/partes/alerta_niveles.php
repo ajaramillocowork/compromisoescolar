@@ -10,22 +10,22 @@
 		Emergente 
 		&nbsp;
 		<strong>
-			<i class="fa fa-question-circle" style="color:#2d6693;" aria-hidden="true" onclick="definicion_emergente_ce()"></i>
+			<i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_emergente_ce()"></i>
 		</strong>
 		&nbsp;
 		En Desarrollo &nbsp;
 		<strong>
-			<i class="fa fa-question-circle" style="color:#fc455c;" onclick="definicion_perfil_en_desarrollo_ce()"></i>
+			<i class="fa fa-question-circle" style="color:#fc455c;  font-size: 20px" onclick="definicion_perfil_en_desarrollo_ce()"></i>
 		</strong>
 		&nbsp;
 		Satisfactorio &nbsp;
 		<strong>
-			<i class="fa fa-question-circle" style="color:#f4af1f;" aria-hidden="true" onclick="definicion_perfil_satisfactorio_ce()"></i>
+			<i class="fa fa-question-circle" style="color:#f4af1f;  font-size: 20px" aria-hidden="true" onclick="definicion_perfil_satisfactorio_ce()"></i>
 		</strong>
 		&nbsp;
 		Muy Desarrollado &nbsp;
 		<strong>
-			<i class="fa fa-question-circle" style="color:#40c2d4;" aria-hidden="true" onclick="definicion_perfil_muy_desarrollado_ce()"></i>
+			<i class="fa fa-question-circle" style="color:#40c2d4;  font-size: 20px" aria-hidden="true" onclick="definicion_perfil_muy_desarrollado_ce()"></i>
 		</strong>                                                                                         
 	</span>
 </div>
