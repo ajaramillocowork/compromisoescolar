@@ -523,7 +523,7 @@
                                         <table width="100%" style="">
                                             <tr align="center" valign="top" >
                                                 <td valign="center" align="center" style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
-                                                    <a href="#" download="" id="btn_descargar">
+                                                    <a id="btn_descargar">
                                                         Descargar  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
                                                         <i class="fa fa-download"></i>
                                                     </a>
@@ -667,10 +667,11 @@
             );
 
             if(extension != "pdf" && extension != "mp4") {
+                /*$("#btn_descargar").removeAttr("download");
                 $("#btn_descargar").attr(
-                    "download",
+                    "href",
                      archivos[1][id_fol]
-                );
+                );*/
             } else {
                 $("#btn_descargar").removeAttr("download");
             }
