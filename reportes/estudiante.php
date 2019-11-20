@@ -1095,7 +1095,7 @@
                 window.location.replace(
                     url_base.protocol + "//" + 
                     url_base.host + "/" + 
-                    "recursos.php"
+                    "recursos_edu.php"
                 );
             });
 
