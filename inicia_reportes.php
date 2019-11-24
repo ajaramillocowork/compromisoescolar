@@ -84,7 +84,7 @@
                         <div style="display: flex; align-items: baseline; background: #40c2d4;">
                             <img style="height: 78px; width: 750px;"  src="assets/img/C2_Resultados.png">
                             <div style="margin-top: 20px; margin-left: 195px; font-size: 20px; position: absolute;">
-                                Prepárate para la encuesta
+                                Módulo de Resultados
                             </div>
                         </div>
                     </td> 

@@ -354,7 +354,7 @@
                     </div>
                 </td> 
                 <td align="left" >
-                    <h3 style="color: white;">Módulo de Resultados</h3>
+                    <h3 style="color: white;">Módulo de Recursos educativos</h3>
                 </td>
                 <td align="right" width="50%">
                     <table width="100%">
