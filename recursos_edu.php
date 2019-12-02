@@ -405,21 +405,21 @@
                                     <li style='padding: 5px; margin-left: 0;' class="">
                                         <a id="select_curso" href="#">
                                             Enlaces periodísticos
-                                            <input class="i-menu" value="2" hidden>
+                                            <input class="i-menu" value="1" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;'  class="">
                                         <!-- estudiante.php -->
                                         <a id="" href="#">
                                             Videos y Presentaciones
-                                            <input class="i-menu" value="3" hidden>
+                                            <input class="i-menu" value="2" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;'  class="">
                                         <!-- estudiante.php -->
                                         <a id="" href="#">
                                             Artículos Científicos
-                                            <input class="i-menu" value="4" hidden>
+                                            <input class="i-menu" value="3" hidden>
                                         </a>
                                     </li>
 
