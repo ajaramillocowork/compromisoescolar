@@ -500,6 +500,17 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                                         </table>
                                     </div>
                                     <div class="panel-body">
+                                        <div>
+                                            <span>
+                                                <p style="font-size: 20px; text-align: center">Reporte Sostenedor Básica (<?php echo $totalParticipantesBasica?>)</>
+                                            </span>
+                                            <span style="padding-left: 1rem">
+                                                <strong>
+			                                        <i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_cuadrantes()"></i>
+		                                        </strong>
+                                            </span>
+
+                                        </div>
                                         <div class="table-responsive mt-4" style="margin-top: 0; padding-top: 0;">
                                             <div id="dispersion-sostenedor-basica" style="width: 100%; padding: 0; height: 500px; margin: 0 auto">
                                                 
@@ -623,7 +634,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
     var des_flag = false;
     const defaultOptions = {
         title: {
-            text: 'Reporte Sostenedor Básica (<?php echo $totalParticipantesBasica?>)'
+            text: null,
         },
 
         chart: {
