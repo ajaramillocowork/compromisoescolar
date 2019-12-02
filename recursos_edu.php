@@ -405,21 +405,21 @@
                                     <li style='padding: 5px; margin-left: 0;' class="">
                                         <a id="select_curso" href="#">
                                             Enlaces periodísticos
-                                            <input class="i-menu" value="1" hidden>
-                                        </a>
-                                    </li>
-                                    <li style='padding: 5px; margin-left: 0;'  class="">
-                                        <!-- estudiante.php -->
-                                        <a id="" href="#">
-                                            Videos y Presentaciones
                                             <input class="i-menu" value="2" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;'  class="">
                                         <!-- estudiante.php -->
                                         <a id="" href="#">
-                                            Artículos Científicos
+                                            Videos y Presentaciones
                                             <input class="i-menu" value="3" hidden>
+                                        </a>
+                                    </li>
+                                    <li style='padding: 5px; margin-left: 0;'  class="">
+                                        <!-- estudiante.php -->
+                                        <a id="" href="#">
+                                            Artículos Científicos
+                                            <input class="i-menu" value="4" hidden>
                                         </a>
                                     </li>
 
@@ -438,14 +438,14 @@
                                     <li style='padding: 5px; margin-left: 0;' >
                                         <a id="select_curso" href="#">
                                             Evaluación y predicción
-                                            <input class="i-menu" value="1" hidden>
+                                            <input class="i-menu" value="2" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;'  class="">
                                         <!-- estudiante.php -->
                                         <a id="" href="#">
                                             Diagnóstico e interpretación
-                                            <input class="i-menu" value="2" hidden>
+                                            <input class="i-menu" value="1" hidden>
                                         </a>
                                     </li>
                                 </ul>
@@ -680,11 +680,14 @@
 
         function GetIdFold(id_f) {
             id_fol = id_f;
+            console.log('id_fol: ' + id_fol)
             fil_descargar = url_base.protocol + "//" + 
             url_base.host + "/" + 
             archivos[1][id_f];
+            console.log('archivos: ' + archivos);
             console.log("aqui: " + fil_descargar);
             var extension = (fil_descargar + "").split("/");
+            console.log('extension: ' + extension);
             extension = extension[extension.length - 1].split(".")[1];
             CambiaTipo(extension);
             console.log("fin: " + extension);
@@ -704,8 +707,8 @@
           
         $(document).ready(function () {
             $("#titulo_div").empty();
-            var sel_menu = 0;
-            var sel_sub_menu = 0;
+            var sel_menu = 2;
+            var sel_sub_menu = 1;
 
             $("#t-menu-1").slideToggle("fast");
             $("#t-menu-2").slideUp("fast");
@@ -732,7 +735,7 @@
                         sub_folder: sel_sub_menu
                     }, success: function(data) {
                         $("#id_archivos").empty();
-                        
+
                         archivos = JSON.parse(data);
                         var tab = "";
                         console.log(archivos);
