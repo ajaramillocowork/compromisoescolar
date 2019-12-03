@@ -354,7 +354,7 @@
                     </div>
                 </td> 
                 <td align="left" >
-                    <h3 style="color: white;">Módulo de Recursos educativos</h3>
+                    <h3 style="color: white;">Módulo de Recursos Educativos</h3>
                 </td>
                 <td align="right" width="50%">
                     <table width="100%">
@@ -402,6 +402,12 @@
                                     <input class="a-menu" value="1" hidden>
                                 </a>
                                 <ul class="treeview-menu" id="t-menu-1">
+                                    <li style='padding: 5px; margin-left: 0;' class="">
+                                        <a id="select_curso" href="#">
+                                            Desafío para la educación
+                                            <input class="i-menu" value="4" hidden>
+                                        </a>
+                                    </li>
                                     <li style='padding: 5px; margin-left: 0;' class="">
                                         <a id="select_curso" href="#">
                                             Enlaces periodísticos

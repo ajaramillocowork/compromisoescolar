@@ -23,6 +23,7 @@ function Conexion() {
     try {
         if(in_array($_SERVER['REMOTE_ADDR'], $lista)){
             $conn = new PDO(
+
                 "mysql:host=localhost; dbname=compromiso_escolar;charset=UTF8", 
                 "carlos", //root
                 "secret"
@@ -34,8 +35,8 @@ function Conexion() {
             return $conn;
         } else {
             $conn = new PDO(
-                "mysql:host=167.71.191.60; dbname=compromiso_escolar;charset=UTF8", 
-                "root", 
+                "mysql:host=167.71.191.60; dbname=compromiso_escolar;charset=UTF8",
+                "root",
                 "92mbx6#p^wq@hac^"
             ); 
             $conn->setAttribute(
@@ -43,7 +44,7 @@ function Conexion() {
                 PDO :: ERRMODE_EXCEPTION
             );
             return $conn;
-        } 
+        }
     } catch (Exception $e) {
         exit ("Excepción capturada: ".$e->getMessage());
     }

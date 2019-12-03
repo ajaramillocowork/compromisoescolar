@@ -472,9 +472,14 @@
                             <div class="col-xs-12">
                                 <div class="panel panel-info">
                                     <div class="panel-heading">
-                                        <h4><?php echo $establecimiento['ce_establecimiento_nombre'] ?></h4>
+                                        <h4>Gráfico de Dispersión</h4>
                                     </div>
-                                    <div class="panel-body" id="id_graficos_p">
+                                    <div class="panel-body">
+                                        <div>
+                                            <span>
+                                                <p style="font-size: 20px; text-align: center">Reporte Establecimiento <i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_cuadrantes()"></i></p>
+                                            </span>
+                                        </div>
                                         <div id="id_graficos_b">
                                             <div id="dispersion-establecimiento-basica" style="min-width: 310px; height: 500px; margin: 0 auto" <?php echo $hidden_basica; ?> >
                                             </div>
@@ -781,7 +786,7 @@
             ...defaultOptions,
 
             title: {
-                text: 'Reporte Establecimiento Basica (<?php echo $totalParticipantesBasica?>)'
+                text: null
             },
 
             series: [{

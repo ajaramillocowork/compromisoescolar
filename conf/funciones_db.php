@@ -9632,18 +9632,18 @@ from ce_encuesta_resultado a where UPPER(a.ce_participantes_token_fk) = UPPER('$
             <tr valign="center">
                 <td style="padding-left: 10px; font-weight: bold;" align="left" width="100%">
                     <h4>
-                        <span><strong>Grafica de Dispersión</strong><span>
-                        <span style="padding-left: 1rem">
-                                                <strong>
-			                                        <i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_cuadrantes()"></i>
-		                                        </strong>
-                                            </span>
+                        <span><strong>Gráfico de Dispersión</strong><span>
                     </h4>
                 </td>
             </tr>      
         </table>
     </div>
     <div id="id_panel_grafico" class="panel-body">
+        <div>
+        <span>
+            <p style="font-size: 20px; text-align: center">Reporte Estudiante <i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_cuadrantes()"></i></p>
+        </span>
+        </div>
         <div class="table-responsive mt-4" style="margin-top: 0; padding-top: 0;">
             <div id="ver_dispersion">
                 <div id="demo_dispersion_alumno" style="height: 450px; margin: auto;" hidden>  
