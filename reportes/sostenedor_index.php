@@ -493,7 +493,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                                             <tbody>
                                                 <tr valign="center">
                                                     <td style="padding-left: 10px; font-weight: bold;" align="left" width="100%">
-                                                        <h4><strong>Grafica de Dispersión (Básica)</strong></h4>
+                                                        <h4><strong>Gráfico de Dispersión</strong></h4>
                                                     </td>
                                                 </tr>      
                                             </tbody>
@@ -502,14 +502,8 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                                     <div class="panel-body">
                                         <div>
                                             <span>
-                                                <p style="font-size: 20px; text-align: center">Reporte Sostenedor Básica (<?php echo $totalParticipantesBasica?>)</>
+                                                <p style="font-size: 20px; text-align: center">Reporte Sostenedor <i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_cuadrantes()"></i></p>
                                             </span>
-                                            <span style="padding-left: 1rem">
-                                                <strong>
-			                                        <i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_cuadrantes()"></i>
-		                                        </strong>
-                                            </span>
-
                                         </div>
                                         <div class="table-responsive mt-4" style="margin-top: 0; padding-top: 0;">
                                             <div id="dispersion-sostenedor-basica" style="width: 100%; padding: 0; height: 500px; margin: 0 auto">
@@ -530,7 +524,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                                                 <tr valign="center">
                                                     <td style="padding-left: 10px; font-weight: bold;" align="left" width="100%">
                                                         <h4>
-                                                            <strong>Grafica de Dispersión (Media)</strong>
+                                                            <strong>Grafica de Dispersión</strong>
                                                         </h4>
                                                     </td>
                                                 </tr>      

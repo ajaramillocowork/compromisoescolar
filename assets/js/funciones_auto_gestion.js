@@ -935,7 +935,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
                                $('#file').val('');
                                document.getElementById("dowload").innerHTML = ('');
                             alertify.set('notifier','position', 'center-top');
-                            alertify.error("<div class='text-white text-center'>La carga asociada al docente ya se a realizado</div>");
+                            alertify.error("<div class='text-white text-center'>La carga asociada al docente ya se ha realizado</div>");
                               
                             $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
                            }
