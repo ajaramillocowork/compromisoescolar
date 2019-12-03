@@ -7,14 +7,14 @@ define('DB_NAME', 'compromiso_escolar');
 define('DB_PORT', '3306');
 
 function connectDB() {
-    return Coneccion();
+    return Conexion();
 }
 
 function connectDB_demos() {
-    return Coneccion();
+    return Conexion();
 }
 
-function Coneccion() {
+function Conexion() {
     $lista = array(
         '127.0.0.1',
         '::1'

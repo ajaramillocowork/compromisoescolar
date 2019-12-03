@@ -934,10 +934,6 @@
         var fewSeconds = 5;
         var des_flag = false;
 
-        function E_seleccionado(seleccionado) {
-            alert(seleccionado);
-        }
-
         function login_admin() {
             url_base_2 = url_base.protocol + "//" + url_base.host;
             dir = url_base_2 + "/php/valida_login.php";
@@ -1047,9 +1043,21 @@
             );
         });
         $(document).ready(function () {
-                  $("#sle_estudiantes2").change(function() {
-  alert( "Handler for .change() called." );
-});
+            if (window.hasOwnProperty("estudiante_seleccionado")) {
+                $('#sle_estudiantes2 option').eq(
+                    window.estudiante_seleccionado
+                ).prop(
+                    'selected', 
+                    true
+                );
+
+                $('#sle_estudiantes option').eq(
+                    window.estudiante_seleccionado
+                ).prop(
+                    'selected', 
+                    true
+                );
+            }
             $("#selector_estudiantes").css("display", "none");
             var combo = document.getElementById("sle_estudiantes");
             var selected = combo.options[combo.selectedIndex].value;
