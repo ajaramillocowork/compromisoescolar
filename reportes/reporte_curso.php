@@ -144,7 +144,7 @@ profesores).</p>
 <table style="border-collapse: collapse; width: 100%; table-layout: fixed; margin-top:12px;" border="1" cellpadding="3"><thead><tr><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">Items</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">NU</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">AL</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">AM</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">MV</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">SC</th></tr></thead>
 <tbody>'.dimension_cognitivo_curso_copia($_SESSION["id_establecimiento"], $_SESSION["id_profesor"]).'</tbody></table>
 
-<div class="mpdf_subtitulo">Apoyo Familiar</div>
+<div class="mpdf_subtitulo">Apoyo Familia</div>
 <table style="border-collapse: collapse; width: 100%; table-layout: fixed; margin-top:12px;" border="1" cellpadding="3"><thead><tr><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">Items</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">NU</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">AL</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">AM</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">MV</th><th style="background-color:#fc455c;border: 1px solid #fc455c;color:white; border-right-color:white;">SC</th></tr></thead>
 <tbody>'.dimension_apoyo_familiar_curso_copia($_SESSION["id_establecimiento"], $_SESSION["id_profesor"]).'</tbody></table>
 
@@ -239,7 +239,7 @@ educativa del estudiante. Ahora, si teniendo el (la) estudiante un puntaje alto 
 presenta un bajo compromiso escolar, se requiere evaluar que otros factores contextuales pudiesen estar influyendo
 en el compromiso escolar del estudiante</p>
 
-<div class="subtitulos  pt-1">Apoyo Familiar</div>
+<div class="subtitulos  pt-1">Apoyo Familia</div>
 
 <p>En el curso '.$_SESSION["curso_nombre"].', el '.$factores_contextuales["porcentaje_familiar_emergente"].'% de los estudiantes poseen un perfil bajo de APOYO Y EXPECTATIVAS DE ADULTOS SIGNIFICATIVOS, el '.$factores_contextuales["porcentaje_familiar_en_desarrollo"].'% un perfil mediano, el '.$factores_contextuales["porcentaje_familiar_satisfactorio"].'% un perfil alto y el '.$factores_contextuales["porcentaje_familiar_muy_desarrollado"].'% un
 perfil muy alto.</p>

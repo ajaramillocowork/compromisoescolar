@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="../assets/css/hover.css">
 
 <link rel="stylesheet" href="../assets/css/animate.css">
-<link rel="shortcut icon" href="../assets/img/favicon.ico">
+<link rel="shortcut icon" href="/assets/img/favicon.png">
 
 <link rel="stylesheet" href="../assets/js/alertifyjs/css/alertify.css">
 <link rel="stylesheet" href="../assets/js/alertifyjs/css/themes/default.css">

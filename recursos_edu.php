@@ -354,7 +354,7 @@
                     </div>
                 </td> 
                 <td align="left" >
-                    <h3 style="color: white;">Módulo de Resultados</h3>
+                    <h3 style="color: white;">Módulo de Recursos educativos</h3>
                 </td>
                 <td align="right" width="50%">
                     <table width="100%">
@@ -438,14 +438,14 @@
                                     <li style='padding: 5px; margin-left: 0;' >
                                         <a id="select_curso" href="#">
                                             Evaluación y predicción
-                                            <input class="i-menu" value="1" hidden>
+                                            <input class="i-menu" value="2" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;'  class="">
                                         <!-- estudiante.php -->
                                         <a id="" href="#">
                                             Diagnóstico e interpretación
-                                            <input class="i-menu" value="2" hidden>
+                                            <input class="i-menu" value="1" hidden>
                                         </a>
                                     </li>
                                 </ul>
@@ -523,7 +523,7 @@
                                         <table width="100%" style="">
                                             <tr align="center" valign="top" >
                                                 <td valign="center" align="center" style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
-                                                    <a href="#" download="" id="btn_descargar">
+                                                    <a id="btn_descargar">
                                                         Descargar  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
                                                         <i class="fa fa-download"></i>
                                                     </a>
@@ -667,10 +667,11 @@
             );
 
             if(extension != "pdf" && extension != "mp4") {
+                /*$("#btn_descargar").removeAttr("download");
                 $("#btn_descargar").attr(
-                    "download",
+                    "href",
                      archivos[1][id_fol]
-                );
+                );*/
             } else {
                 $("#btn_descargar").removeAttr("download");
             }
@@ -679,11 +680,14 @@
 
         function GetIdFold(id_f) {
             id_fol = id_f;
+            console.log('id_fol: ' + id_fol)
             fil_descargar = url_base.protocol + "//" + 
             url_base.host + "/" + 
             archivos[1][id_f];
+            console.log('archivos: ' + archivos);
             console.log("aqui: " + fil_descargar);
             var extension = (fil_descargar + "").split("/");
+            console.log('extension: ' + extension);
             extension = extension[extension.length - 1].split(".")[1];
             CambiaTipo(extension);
             console.log("fin: " + extension);
@@ -703,8 +707,8 @@
           
         $(document).ready(function () {
             $("#titulo_div").empty();
-            var sel_menu = 0;
-            var sel_sub_menu = 0;
+            var sel_menu = 2;
+            var sel_sub_menu = 1;
 
             $("#t-menu-1").slideToggle("fast");
             $("#t-menu-2").slideUp("fast");
@@ -731,7 +735,7 @@
                         sub_folder: sel_sub_menu
                     }, success: function(data) {
                         $("#id_archivos").empty();
-                        
+
                         archivos = JSON.parse(data);
                         var tab = "";
                         console.log(archivos);

@@ -529,7 +529,7 @@
                                         <h4><b>Factores Contextuales</b></h4></div>
                                     <div class="panel-body">
                                         <ul class="nav nav-pills">
-                                            <li class="active"><a data-toggle="pill" href="#dimension_familia">Apoyo Familiar</a></li>
+                                            <li class="active"><a data-toggle="pill" href="#dimension_familia">Apoyo Familia</a></li>
                                             <li><a data-toggle="pill" href="#dimension_pares">Apoyo Pares</a></li>
                                             <li><a data-toggle="pill" href="#dimension_profesores">Apoyo Profesores</a></li>
                                         </ul>
@@ -1102,7 +1102,7 @@
                 window.location.replace(
                     url_base.protocol + "//" + 
                     url_base.host + "/" + 
-                    "recursos.php"
+                    "recursos_edu.php"
                 );
             });
 

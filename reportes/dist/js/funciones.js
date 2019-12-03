@@ -107,6 +107,63 @@ function definicion_perfil_muy_alto_fc(){
   alertify.alert("Perfil muy Alto ", "<p class='text-justify'>El <strong>Perfil muy Alto</strong> los niveles de compromiso escolar son altamente influenciables por factores contextuales, por ejemplo, Apoyo recibido de Ia familia, Apoyo recibido de pares y Apoyo recibido de profesores. Si los factores contextuales presentan un alto o muy alto, desarrollo, estos se constituyen en factores protectores para la trayectoria educativa del estudiante. Ahora, si teniendo el (la) estudiante un puntaje alto o muy alto en estas variables, aún presenta un bajo compromiso escolar, se requiere evaluar que otros factores contextuales pudiesen estar influyendo en el compromiso escolar del estudiante.</p>").set('resizable', true).resizeTo('60%', 250);
 }
 
+function definicion_cuadrantes(){
+
+	alertify.alert("Información de cuadrantes de gráfica", "<p class='text-justify'>El primer cuadrante <strong>Alto compromiso escolar y Factores contextuales limitantes (+,-):</strong> Estudiantes que presentan altos niveles de participación e interés en las actividades\n" +
+		"académicas. En general consideran que el aprendizaje sea significativo para su presente\n" +
+		"y futuro, al tiempo que se sienten parte de una comunidad escolar. Se trata de\n" +
+		"estudiantes que presentan una disposición para invertir destrezas cognitivas dentro del\n" +
+		"aprendizaje y logran un dominio de habilidades de gran complejidad. EI tener un\n" +
+		"compromiso escolar desarrollado es un factor protector que puede facilitar las\n" +
+		"trayectorias educativas exitosas y prevenir otras situaciones de riesgo asociadas a la\n" +
+		"deserción escolar. EI compromiso escolar es altamente permeable por factores\n" +
+		"contextuales. En este caso se aprecia que Ios factores contextuales evaluados (familia,\n" +
+		"pares y profesores) se constituyen en factores de riesgo, por lo que se hace necesario\n" +
+		"prestar atención pues puede el compromiso escolar verse alterado en el corto plazo si\n" +
+		"esos factores de riesgo no se revierten.</p><br>" +
+		"<p class='text-justify'>El segundo cuadrante <strong>Alto compromiso escolar y Factores contextuales facilitadores (+,+):</strong>" +
+		" Estudiantes que presentan altos niveles de participación e interés en las actividades\n" +
+		"académicas. En general consideran que el aprendizaje sea significativo para su presente\n" +
+		"y futuro, al tiempo que se sienten parte de una comunidad escolar. Se trata de\n" +
+		"estudiantes que presentan una disposición para invertir destrezas cognitivas dentro del\n" +
+		"aprendizaje y logran un dominio de habilidades de gran complejidad. EI tener un\n" +
+		"compromiso escolar desarrollado es un factor protector que puede facilitar las\n" +
+		"trayectorias educativas exitosas y prevenir otras situaciones de riesgo asociadas a la\n" +
+		"deserción escolar. EI compromiso escolar es altamente permeable por factores\n" +
+		"contextuales, tales como el apoyo de la familia, Ios pares y los profesores. Estas\n" +
+		"variables se constituyen en facilitadores del compromiso escolar para este grupo de\n" +
+		"estudiantes.</p><br>" +
+		"<p class='text-justify'>El tercer cuadrante <strong>Bajo compromiso Escolar y Factores contextuales facilitadores (-,+):</strong>" +
+		" Estudiantes que presentan una débil participación e interés en las actividades\n" +
+		"académicas. En general no consideran que el aprendizaje sea significativo para su\n" +
+		"presente y futuro, al tiempo que no se sienten parte de una comunidad escolar. No hay\n" +
+		"una disposición para invertir destrezas cognitivas dentro del aprendizaje y dominio de\n" +
+		"nuevas habilidades de gran complejidad. EI no tener un compromiso escolar\n" +
+		"desarrollado es un factor de riesgo de Ia deserción escolar, para graduarse con altos\n" +
+		"niveles de conductas de riesgo y un bajo rendimiento académico. El compromiso escolar\n" +
+		"es altamente permeable por factores contextuales. En este caso se aprecia que Ios\n" +
+		"factores contextuales evaluados (familia, pares y profesores) no se constituyen en\n" +
+		"factores de riesgo, por lo que se hace necesario evaluar qué otros factores pueden estar\n" +
+		"afectando el compromiso escolar de Ios estudiantes, tales como prácticas educativas no\n" +
+		"motivantes o precarios servicios de apoyo a la escuela.</p><br>" +
+		"<p class='text-justify'>El cuarto cuadrante <strong>Bajo compromiso escolar y Factores contextuales limitantes (-,-);</strong>" +
+		" Estudiantes que presentan una débil participación e interés en las actividades\n" +
+		"académicas. En general, no consideran que el aprendizaje sea significativo para su\n" +
+		"presente y futuro, al tiempo que no se sienten parte de una comunidad escolar. No hay\n" +
+		"una disposición para invertir destrezas cognitivas dentro del aprendizaje y dominio de\n" +
+		"nuevas habilidades de gran complejidad. EI no tener un compromiso escolar\n" +
+		"desarrollado es un factor de riesgo de Ia deserción escolar, para graduarse con altos\n" +
+		"niveles de conductas de riesgo y un bajo rendimiento académico. EI compromiso escolar\n" +
+		"es altamente permeable por factores contextuales. En este caso se aprecia que el débil\n" +
+		"compromiso escolar se vincula a un bajo involucramiento de Ia familia del estudiante en\n" +
+		"su proceso de aprendizaje junto con un clima escolar deteriorado (relación con\n" +
+		"profesores y pares) lo que termina desmotivando al estudiante. Un clima escolar\n" +
+		"deteriorado se puede observar en malas relaciones entre estudiante y profesores, entre\n" +
+		"Ios mismos estudiantes, y en un ambiente donde se han deteriorado los lazos de\n" +
+		"respeto y confianza." +
+		"</p>").set('resizable', true).resizeTo('60%', 460);
+}
+
 function fortaleza_afectiva(numero) {
   if(numero === 1){
 	var tip_alerta = '<strong>El o la estudiante posee fortalezas en la mayoria de los siguientes aspectos:</strong><br><br>'

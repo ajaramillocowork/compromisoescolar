@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="template.css">
 <link rel="stylesheet" href="../assets/js/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="../assets/css/aweasome/css/font-awesome.css">
-<link rel="icon" href="../assets/img/favicon.ico">
+<link rel="icon" href="../assets/img/favicon.png">
 <link rel="stylesheet" type="text/css" href="../assets/js/alertifyjs/css/alertify.css">
 <link rel="stylesheet" type="text/css" href="../assets/js/alertifyjs/css/themes/default.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/hover.css">
