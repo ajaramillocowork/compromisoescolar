@@ -802,9 +802,9 @@
                                     <div class="col-md-6">
                                         <div id="selector_estudiantes" class="col-xs-6">
                                             <label>Seleccione un Estudiante <i class="fa fa-user"></i>:</label>
-                                            <select name="sle_estudiantes" id="sle_estudiantes" class="form-control">
+                                            <select onchange="E_seleccionado(this)" name="sle_estudiantes" id="sle_estudiantes" class="form-control">
                                                 <?php
-                                                        select_estudiantes_por_curso($tipo["id_ce_docente"]);
+                                                  select_estudiantes_por_curso($tipo["id_ce_docente"]);
                                                     ?>
                                             </select>
                                         </div>
@@ -1043,6 +1043,21 @@
             );
         });
         $(document).ready(function () {
+            if (window.hasOwnProperty("estudiante_seleccionado")) {
+                $('#sle_estudiantes2 option').eq(
+                    window.estudiante_seleccionado
+                ).prop(
+                    'selected', 
+                    true
+                );
+
+                $('#sle_estudiantes option').eq(
+                    window.estudiante_seleccionado
+                ).prop(
+                    'selected', 
+                    true
+                );
+            }
             $("#selector_estudiantes").css("display", "none");
             var combo = document.getElementById("sle_estudiantes");
             var selected = combo.options[combo.selectedIndex].value;

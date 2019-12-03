@@ -1,68 +1,43 @@
 <?php
 
 define('DB_SERVER', 'localhost');
-define('DB_USER', 'jonaba');
-define('DB_PASS', '');
+define('DB_USER', 'carlos');
+define('DB_PASS', 'secret');
 define('DB_NAME', 'compromiso_escolar');
-
-function RetornaNameDB() {
-    $dir = dirname(__FILE__);
-    $dir = explode("/", $dir);
-    $dir = $dir[count($dir) - 2];
-    $nombre_db = "";
-
-    if (strcasecmp($dir, "compromiso-escolar") == 0) {
-        $nombre_db = "compromiso_escolar";
-    } else {
-        $nombre_db = "compromiso_escolar_etapa2";
-    }
-    echo '<script type="text/javascript"> console.log("'.$nombre_db.'"); </script>';
-    return $nombre_db;
-}
+define('DB_PORT', '3306');
 
 function connectDB() {
-    try {
-        if($_SERVER['SERVER_ADDR'] == '::1'){
-            $conn = new PDO(
-                "mysql:host=localhost; dbname=compromiso_escolar;",
-                "daniel",
-                "1234"
-            );
-            $conn->setAttribute(PDO :: ATTR_ERRMODE, PDO :: ERRMODE_EXCEPTION);
-            return $conn;
-        } elseif($_SERVER['SERVER_ADDR'] == '167.71.191.60') {
-            $conn = new PDO(
-                "mysql:host=167.71.191.60; dbname=compromiso_escolar;charset=UTF8",
-                "root",
-                "92mbx6#p^wq@hac^"
-            );
-            $conn->setAttribute(PDO :: ATTR_ERRMODE, PDO :: ERRMODE_EXCEPTION);
-            return $conn;
-        }
-    } catch (Exception $e) {
-        exit ("Excepción capturada: ".$e->getMessage());
-    }
+    return Conexion();
 }
 
 function connectDB_demos() {
+    return Conexion();
+}
+
+function Conexion() {
+    $lista = array(
+        '127.0.0.1',
+        '::1'
+    );
+
     try {
-        if($_SERVER['SERVER_ADDR'] == '::1') {
+        if(in_array($_SERVER['REMOTE_ADDR'], $lista)){
             $conn = new PDO(
-                "mysql:host=localhost; dbname=compromiso_escolar;charset=UTF8",
-                "daniel",
-                "1234"
-            );
+                "mysql:host=localhost; dbname=compromiso_escolar;", 
+                "carlos", //root
+                "secret"
+            );      
             $conn->setAttribute(PDO :: ATTR_ERRMODE, PDO :: ERRMODE_EXCEPTION);
             return $conn;
-        } elseif($_SERVER['SERVER_ADDR'] == '167.71.191.60') {
+        } else {
             $conn = new PDO(
-                "mysql:host=167.71.191.60; dbname=compromiso_escolar;charset=UTF8",
-                "root",
+                "mysql:host=167.71.191.60; dbname=compromiso_escolar;charset=UTF8", 
+                "root", 
                 "92mbx6#p^wq@hac^"
-            );
+            ); 
             $conn->setAttribute(PDO :: ATTR_ERRMODE, PDO :: ERRMODE_EXCEPTION);
             return $conn;
-        }
+        } 
     } catch (Exception $e) {
         exit ("Excepción capturada: ".$e->getMessage());
     }
