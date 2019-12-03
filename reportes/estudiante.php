@@ -802,9 +802,9 @@
                                     <div class="col-md-6">
                                         <div id="selector_estudiantes" class="col-xs-6">
                                             <label>Seleccione un Estudiante <i class="fa fa-user"></i>:</label>
-                                            <select name="sle_estudiantes" id="sle_estudiantes" class="form-control">
+                                            <select onchange="E_seleccionado(this)" name="sle_estudiantes" id="sle_estudiantes" class="form-control">
                                                 <?php
-                                                        select_estudiantes_por_curso($tipo["id_ce_docente"]);
+                                                  select_estudiantes_por_curso($tipo["id_ce_docente"]);
                                                     ?>
                                             </select>
                                         </div>
@@ -934,6 +934,10 @@
         var fewSeconds = 5;
         var des_flag = false;
 
+        function E_seleccionado(seleccionado) {
+            alert(seleccionado);
+        }
+
         function login_admin() {
             url_base_2 = url_base.protocol + "//" + url_base.host;
             dir = url_base_2 + "/php/valida_login.php";
@@ -1043,6 +1047,9 @@
             );
         });
         $(document).ready(function () {
+                  $("#sle_estudiantes2").change(function() {
+  alert( "Handler for .change() called." );
+});
             $("#selector_estudiantes").css("display", "none");
             var combo = document.getElementById("sle_estudiantes");
             var selected = combo.options[combo.selectedIndex].value;

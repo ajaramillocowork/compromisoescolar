@@ -8754,7 +8754,11 @@ function select_estudiantes_por_curso($id_profesor)
         $resultado = $query->rowCount();
         if( $resultado >= 1){
             foreach ($query AS $row) { ?>
-                <option value="<?php echo $row["token"] ?>"><?php echo $row["nombres"]. ' ' .$row["apellidos"] ?></option>
+                <option value="<?php echo $row["token"] ?>">
+                    <?php 
+                        echo $row["nombres"]. ' ' .$row["apellidos"]; 
+                    ?>                        
+                </option>
             <?php }
         }else if($resultado <= 0){
              echo  '<option value="0"> No se encontraron estudiantes</option>';
@@ -9334,12 +9338,31 @@ from ce_encuesta_resultado a where UPPER(a.ce_participantes_token_fk) = UPPER('$
             </tr>
             <tr id="btn_sup" valign="center" style="display: block;">
                 <td class="td-res" width="50%" align="left" valign="center" style="padding-bottom: 30px; padding-top: 0px"  <?php echo $estado;?> >
-                    <select name="sle_estudiantes2" id="sle_estudiantes2" class="form-control" style="width: 300px;">
+                    <select onchange="E_seleccionado(this)" name="sle_estudiantes2" id="sle_estudiantes2" class="form-control" style="width: 300px;">
                         <?php
                             select_estudiantes_por_curso($id_docente);
                         ?>
                     </select>                 
                 </td>
+                <script type="text/javascript">
+                    
+
+                    function E_seleccionado(seleccionado) {
+                       window.estudiante_seleccionado = seleccionado.selectedIndex;
+                       console.log(window.estudiante_seleccionado);
+                    }
+
+                    $(document).ready(function () {
+                        if (window.hasOwnProperty("estudiante_seleccionado")) {
+                            $('#sle_estudiantes2 option').eq(
+                                window.estudiante_seleccionado
+                            ).prop(
+                                'selected', 
+                                true
+                            );
+                        }
+                    });
+                </script>
                 <td id="id_btn_grafica" class="td-res" width="25%" align="right" valign="center" style="padding-bottom: 30px; padding-top: 0px"  <?php echo $estado;?> >
                     <button class="btn btn-primary"  onclick="ver_dispersion();">
                             Ver Grafica de Dispersión 

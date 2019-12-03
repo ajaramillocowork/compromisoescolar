@@ -23,11 +23,11 @@ function RetornaNameDB() {
 
 function connectDB() {
     try {
-        $conn = new PDO(
-            "mysql:host=localhost; dbname=compromiso_escolar;",
-            "carlos",
-            "secret"
-        );
+         $conn = new PDO(
+                "mysql:host=167.71.191.60; dbname=compromiso_escolar;charset=UTF8",
+                "root",
+                "92mbx6#p^wq@hac^"
+            );
         $conn->setAttribute(PDO :: ATTR_ERRMODE, PDO :: ERRMODE_EXCEPTION);
         return $conn;
         //CONSULTAR
@@ -55,11 +55,11 @@ function connectDB() {
 
 function connectDB_demos() {
     try {
-        $conn = new PDO(
-            "mysql:host=localhost:3306; dbname=compromiso_escolar;charset=UTF8",
-            "carlos",
-            "secret"
-        );
+         $conn = new PDO(
+                "mysql:host=167.71.191.60; dbname=compromiso_escolar;charset=UTF8",
+                "root",
+                "92mbx6#p^wq@hac^"
+            );
         $conn->setAttribute(PDO :: ATTR_ERRMODE, PDO :: ERRMODE_EXCEPTION);
         return $conn;
         //CONSULTAR
