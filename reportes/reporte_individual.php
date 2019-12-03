@@ -52,7 +52,11 @@ $mpdfConfig = array(
   $mpdf->SetHTMLHeader('<div style="text-align: center; font-weight: bold;"><img src="../assets/img/encabezado_informe_estudiante.jpg"/></div>', 'O', true);
   $mpdf->SetHTMLFooter('<div style="text-align: center;border-top: 1px solid #fc455c; color: #fc455c; padding-top:3px;">{PAGENO}</div>');
   
-
+if ($duracion_encuesta["minutos"] == 0 && $duracion_encuesta["segundos"] == 0) {
+  $duracion = $duracion_encuesta["minutos"].' minutos con '.$duracion_encuesta["segundos"]." segundos";
+} else {
+  $duracion = "No Especificada";
+}
 
 $fecha = date('d-m-Y')." | ".date('H:i');
 
@@ -62,7 +66,7 @@ $mpdf->WriteHTML('<style> table { min-height: 500px; } </style><div class="conta
 <span>Curso:' . $resultado_estudiante["curso"] . '</span><br>
 <span>Establecimiento:' . $resultado_estudiante["establecimiento"] . '</span><br>
 <span>Fecha: ' .$fecha. '</span><br>
-<span>Duracion encuesta: '.$duracion_encuesta["minutos"].' minutos con '.$duracion_encuesta["segundos"].' segundos</span>
+<span>Duracion encuesta: '.$duracion.'</span>
 </div>
 <div class="descrip_com_esco">
 <div class="subtitulos pt-1">Definiciones</div>
