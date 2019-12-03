@@ -9342,7 +9342,8 @@ from ce_encuesta_resultado a where UPPER(a.ce_participantes_token_fk) = UPPER('$
                         <?php
                             select_estudiantes_por_curso($id_docente);
                         ?>
-                    </select>                 
+                    </select>  
+                    <div class="loader" id="loading_flag" hidden></div>               
                 </td>
                 <script type="text/javascript">
                     
@@ -9350,9 +9351,11 @@ from ce_encuesta_resultado a where UPPER(a.ce_participantes_token_fk) = UPPER('$
                     function E_seleccionado(seleccionado) {
                        window.estudiante_seleccionado = seleccionado.selectedIndex;
                        console.log(window.estudiante_seleccionado);
+                       $("#loading_flag").show();
                     }
 
                     $(document).ready(function () {
+                        $("#loading_flag").hide();
                         if (window.hasOwnProperty("estudiante_seleccionado")) {
                             $('#sle_estudiantes2 option').eq(
                                 window.estudiante_seleccionado

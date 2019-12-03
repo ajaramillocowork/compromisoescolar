@@ -295,6 +295,29 @@
 
         
     </style>
+    <style>
+        .loader {
+            position: absolute;
+            left: calc(50% + 15px);
+            background: transparent;
+          border: 16px solid #99CC99;
+          border-radius: 50%;
+          border-top: 16px solid #3498DB;
+          width: 60px;
+          height: 60px;
+          -webkit-animation: spin 1s linear infinite; /* Safari */
+          animation: spin 1s linear infinite;
+        }
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini" style="background: #BDC3C7; ">
     <div id="linea-superior" style="background: #40c2d4; padding-left: 100px; "> 
@@ -796,7 +819,7 @@
                             </div>
                             <!-- /.row -->
                             <!-- Main row -->
-
+                    <div class="loader" id="loading_flag"></div>
                             <div class="col-md-12" id="selector_est">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -808,8 +831,10 @@
                                                     ?>
                                             </select>
                                         </div>
+
                                     </div>
                                 </div>
+
                             </div>
                             <div id="recibe_resultados_estudiantes_2">
 
@@ -928,6 +953,7 @@
     <?php include "partes/graficos_curso.php"; ?>
     <script>
         sesion();
+        window.flag_load = true;
         var url_base = window.location;
         var flag_menu = 1;
         var flag_sbar = 1;
@@ -1022,13 +1048,7 @@
             }, 
             fewSeconds * 1000
             );
-
-
-            
         });
-
-        
-
 
         $("#btn_curso").ready(function () {
             $("#btn_curso").attr("disabled", "true");
@@ -1041,7 +1061,14 @@
             }, 
             5000
             );
+
+            $("#loading_flag").hide();
         });
+
+        
+        function E_seleccionado(argument) {
+            $("#loading_flag").show();
+        }
         $(document).ready(function () {
             if (window.hasOwnProperty("estudiante_seleccionado")) {
                 $('#sle_estudiantes2 option').eq(
