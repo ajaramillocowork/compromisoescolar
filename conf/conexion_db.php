@@ -25,8 +25,8 @@ function Conexion() {
             $conn = new PDO(
 
                 "mysql:host=localhost; dbname=compromiso_escolar;charset=UTF8", 
-                "root",//"carlos", //root
-                "1234"//"secret"
+                "carlos", //root
+                "secret"
             );      
             $conn->setAttribute(
                 PDO :: ATTR_ERRMODE, 
