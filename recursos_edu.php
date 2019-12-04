@@ -535,7 +535,7 @@
                                                     </a>
                                                 </td>
                                                 <td align="center">
-                                                    <img id='id_tipo' src='assets/img/pdf.png' style='width: 50px; padding-bottom: 10px;'>
+                                                    <img id='id_tipo' src='assets/img/ppt.png' style='width: 50px; padding-bottom: 10px;'>
                                                 </td>
                                             </tr>
                                         </table>
