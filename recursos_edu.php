@@ -405,27 +405,27 @@
                                     <li style='padding: 5px; margin-left: 0;' class="">
                                         <a id="select_curso" href="#">
                                             Desafío para la educación
-                                            <input class="i-menu" value="4" hidden>
+                                            <input class="i-menu" value="1" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;' class="">
                                         <a id="select_curso" href="#">
                                             Enlaces periodísticos
-                                            <input class="i-menu" value="1" hidden>
-                                        </a>
-                                    </li>
-                                    <li style='padding: 5px; margin-left: 0;'  class="">
-                                        <!-- estudiante.php -->
-                                        <a id="" href="#">
-                                            Videos y Presentaciones
                                             <input class="i-menu" value="2" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;'  class="">
                                         <!-- estudiante.php -->
                                         <a id="" href="#">
-                                            Artículos Científicos
+                                            Videos y Presentaciones
                                             <input class="i-menu" value="3" hidden>
+                                        </a>
+                                    </li>
+                                    <li style='padding: 5px; margin-left: 0;'  class="">
+                                        <!-- estudiante.php -->
+                                        <a id="" href="#">
+                                            Artículos Científicos
+                                            <input class="i-menu" value="4" hidden>
                                         </a>
                                     </li>
 
@@ -444,14 +444,14 @@
                                     <li style='padding: 5px; margin-left: 0;' >
                                         <a id="select_curso" href="#">
                                             Evaluación y predicción
-                                            <input class="i-menu" value="2" hidden>
+                                            <input class="i-menu" value="1" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;'  class="">
                                         <!-- estudiante.php -->
                                         <a id="" href="#">
                                             Diagnóstico e interpretación
-                                            <input class="i-menu" value="1" hidden>
+                                            <input class="i-menu" value="2" hidden>
                                         </a>
                                     </li>
                                 </ul>
@@ -529,13 +529,13 @@
                                         <table width="100%" style="">
                                             <tr align="center" valign="top" >
                                                 <td valign="center" align="center" style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
-                                                    <a id="btn_descargar">
+                                                    <a id="btn_descargar" style="cursor: pointer">
                                                         Descargar  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
                                                         <i class="fa fa-download"></i>
                                                     </a>
                                                 </td>
                                                 <td align="center">
-                                                    <img id='id_tipo' src='assets/img/pdf.png' style='width: 50px; padding-bottom: 10px;'>
+                                                    <img id='id_tipo' src='assets/img/ppt.png' style='width: 50px; padding-bottom: 10px;'>
                                                 </td>
                                             </tr>
                                         </table>
@@ -741,10 +741,10 @@
                         sub_folder: sel_sub_menu
                     }, success: function(data) {
                         $("#id_archivos").empty();
-
+                        console.log('sel_menu: ', sel_menu,' - sel_sub_menu: ', sel_sub_menu);
                         archivos = JSON.parse(data);
                         var tab = "";
-                        console.log(archivos);
+                        console.log('archivos: ',archivos);
 
                         tab += "<tr align='center' valign='center' class='id_filas' >";
                         $("#id_view_pdf").attr("src", archivos[0][0]);
