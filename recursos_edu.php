@@ -529,7 +529,7 @@
                                         <table width="100%" style="">
                                             <tr align="center" valign="top" >
                                                 <td valign="center" align="center" style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
-                                                    <a id="btn_descargar">
+                                                    <a id="btn_descargar" style="cursor: pointer">
                                                         Descargar  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
                                                         <i class="fa fa-download"></i>
                                                     </a>
