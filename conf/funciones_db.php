@@ -10597,7 +10597,7 @@ function tarjeta_de_presentacion_establecimiento($id_estable) {
             . "<div class='small-box bg-red'>"
             . "<div class='inner'>"
             . "<h3>" . round($avance_curso, 1, PHP_ROUND_HALF_UP) . '%' . "</h3>"
-            . "<p><h4>Total establecimiento encuestado</h4></p>"
+            . "<p><h4>De los cursos inscritos</h4></p>"
             . "</div>"
             . "<div class='icon'>"
             . "<i class='fa fa-pie-chart'></i>"
