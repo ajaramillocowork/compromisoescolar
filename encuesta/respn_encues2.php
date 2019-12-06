@@ -1118,10 +1118,6 @@ history.pushState(null, null, location.href);
                                 <img style="margin-right: 5px;" width="44" src="../assets/img/mineduc.png">
                                 <img style="margin-right: 5px;" width="120" src="../assets/img/fondef.png">
                                 <img style="margin-right: 5px;" width="100" src="../assets/img/corfo.png">
-                            </div>
-                        </td>
-                        <td align="center" width="33%">
-                            <div>
                                 <img style="margin-right: 5px;" width="30" src="../assets/img/ufro.png">
                                 <img style="margin-right: 5px;" width="90" src="../assets/img/autonoma.png">
                                 <img style="margin-right: 5px;" width="150" src="../assets/img/fund_telefonica.png">
