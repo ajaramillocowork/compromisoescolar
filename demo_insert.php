@@ -10,7 +10,8 @@ require_once 'conf/funciones_db.php';
 $id_establecimiento = $_SESSION["identificador_estable"];
 $id_docente = $_POST["id_profesor"];
 $id_curso_nivel = explode(",", $_POST["id_curso"]);
-$id_pais =  $_SESSION["pais_establecimiento"];
+$pais_establecimiento = $_SESSION["pais_establecimiento"];
+$id_pais =  $pais_establecimiento ? $pais_establecimiento : 1;
 $id_curso = $id_curso_nivel[0];
 $id_nivel = $id_curso_nivel[1];
 
@@ -66,7 +67,7 @@ if ($cantidad != 0) {
                 $ciudad = $fila[4];
                 //$run_estudi = substr($run_estudiante, 0, - 1);
                 $token_estu = "A".$run_estudiante;
-                $nuevo = nuevo_estudiante_uni($nombres,$apellidos,$run_estudiante,$fech_nacimiento,$token_estu,$ciudad,$id_establecimiento,$id_docente,$id_curso,$id_nivel,$id_pais);
+                $nuevo = nuevo_estudiante_uni($nombres,$apellidos,$run_estudiante,$fech_nacimiento,$token_estu,$ciudad,$id_establecimiento,$id_docente,$id_curso,$id_nivel, $id_pais);
             }
             $contador ++;
         }

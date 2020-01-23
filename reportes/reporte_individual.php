@@ -52,7 +52,11 @@ $mpdfConfig = array(
   $mpdf->SetHTMLHeader('<div style="text-align: center; font-weight: bold;"><img src="../assets/img/encabezado_informe_estudiante.jpg"/></div>', 'O', true);
   $mpdf->SetHTMLFooter('<div style="text-align: center;border-top: 1px solid #fc455c; color: #fc455c; padding-top:3px;">{PAGENO}</div>');
   
-
+if (intval($duracion_encuesta["minutos"]) != 0 && intval($duracion_encuesta["segundos"]) != 0) {
+  $duracion = $duracion_encuesta["minutos"].' minutos con '.$duracion_encuesta["segundos"]." segundos";
+} else {
+  $duracion = "No Especificada";
+}
 
 $fecha = date('d-m-Y')." | ".date('H:i');
 
@@ -62,7 +66,7 @@ $mpdf->WriteHTML('<style> table { min-height: 500px; } </style><div class="conta
 <span>Curso:' . $resultado_estudiante["curso"] . '</span><br>
 <span>Establecimiento:' . $resultado_estudiante["establecimiento"] . '</span><br>
 <span>Fecha: ' .$fecha. '</span><br>
-<span>Duracion encuesta: '.$duracion_encuesta["minutos"].' minutos con '.$duracion_encuesta["segundos"].' segundos</span>
+<!-- <span>Duracion encuesta: '.$duracion.'</span> -->
 </div>
 <div class="descrip_com_esco">
 <div class="subtitulos pt-1">Definiciones</div>
@@ -183,7 +187,7 @@ tenga información sobre cómo estos factores afectan el compromiso escolar. Den
 incluyen las dimensiones de contextos: Apoyo recibido de la FAMILIA, Apoyo recibido de PARES y Apoyo recibido de
 PROFESORES.</p>
 
-<p><span>Apoyo Familiar:</span> Se refiere a que los/las estudiantes perciben ser apoyados por sus profesores y/o sus familias. La
+<p><span>Apoyo Familia:</span> Se refiere a que los/las estudiantes perciben ser apoyados por sus profesores y/o sus familias. La
 familia del (la) estudiante suele apoyar a su hijo(a) en el proceso de aprendizaje y cuando tiene problemas,
 ayudándolo con las tareas, conversando lo que sucede en la escuela, animándolo y motivándolo a trabajar bien. El
 (Ia) estudiante se siente motivado por sus profesores para aprender y que estos lo ayudan cuando tiene algún
@@ -196,7 +200,7 @@ integración escolar y frente a desafíos escolares y/o cuando tiene una dificul
 
 <p><span>Apoyo Profesores: </span> Se define como la percepción del (la) estudiante acerca del apoyo que recibe de sus profesores.</p>
 
-<div class="subtitulos pt-1">2.1. Apoyo Familiar</div>
+<div class="subtitulos pt-1">2.1. Apoyo Familia</div>
 
 <table style="border-collapse:collapse; width: 800px;">
 <thead>

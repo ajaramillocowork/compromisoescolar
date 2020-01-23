@@ -9,6 +9,7 @@
 		$dir_base, 
 		0
 	);
+
 	$sub_carpetas = ListarDir(
 		$dir_base."/".$carpetas[$folder], 
 		0
@@ -17,6 +18,8 @@
 		$dir_base."/".$carpetas[$folder]."/".$sub_carpetas[$sub_folder], 
 		1
 	);
+
+	//echo $sub_carpetas[$sub_folder];
 	
 	echo json_encode($archis);
 ?>

@@ -587,6 +587,24 @@ if ($totalParticipantesBasica != 0 && $totalParticipantesMedia == 0) {
     </center>
     </div>
     </div>';
+
+    $dat_cur_bas = '<br><br><div class="subtitulos" style="width: 650px; margin-left: auto; margin-right: auto;">Detalle Educación Básica</div><br><center><table  style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: 1px solid #fc455c; width: 600px;">
+    <thead>
+    <tr style="background-color:#fc455c;border: 1px solid #fc455c;">
+    <th style="color:white;">Nombre</th>
+    <th align="center" style="color:white;">FC</th>
+    <th align="center" style="color:white;">CE</th>
+    </tr>
+    </thead>
+    <tbody>';
+
+    for ($i = 0; $i < count($cursos_basica); $i++) { 
+        // FC= x  CE= y
+        $dat_cur_bas = $dat_cur_bas."<tr><td>".$cursos_basica[$i]['name']. "</td> <td align='center'>".$cursos_basica[$i]['x']."</td> <td align='center'>".$cursos_basica[$i]['y']."</td></tr>";
+    }
+    $dat_cur_bas = $dat_cur_bas."</tbody></table></center>";
+
+    $graficos_edu = $graficos_edu."".$dat_cur_bas;
 } else if($totalParticipantesBasica == 0 && $totalParticipantesMedia != 0) {
     $graficos_edu = '
     <center>
@@ -596,20 +614,81 @@ if ($totalParticipantesBasica != 0 && $totalParticipantesMedia == 0) {
     </center>
     </div>
     </div>';
+
+    $dat_cur_med = '<br><br><div class="subtitulos" style="width: 650px; margin-left: auto; margin-right: auto;">Detalle Educación Media</div><br><center><table  style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: 1px solid #fc455c; width: 600px;">
+    <thead>
+    <tr style="background-color:#fc455c;border: 1px solid #fc455c;">
+    <th style="color:white;">Nombre</th>
+    <th align="center" style="color:white;">FC</th>
+    <th align="center" style="color:white;">CE</th>
+    </tr>
+    </thead>
+    <tbody>';
+
+    for ($i = 0; $i < count($cursos_media); $i++) { 
+        // FC= x  CE= y
+        $dat_cur_med = $dat_cur_med."<tr><td>".$cursos_media[$i]['name']. "</td> <td align='center'>".$cursos_media[$i]['x']."</td> <td align='center'>".$cursos_media[$i]['y']."</td></tr>";
+    }
+    $dat_cur_med = $dat_cur_med."</tbody></table></center>";
+
+    $graficos_edu = $graficos_edu."".$dat_cur_med;
 } else if($totalParticipantesBasica != 0 && $totalParticipantesMedia != 0) {
-    $graficos_edu = '
+    $graficos_edu_bas = '
             <center>
             <div class="subtitulos">'.$brechas_basica.'</div>
             <br>
             <div style="width=100%;"><img src="'.$imagen_basica.'"></div>
-            <br>
+            ';
+
+    $dat_cur_bas = '<br><br><div class="subtitulos" style="width: 650px; margin-left: auto; margin-right: auto;">Detalle Educación Básica</div><br><center><table  style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: 1px solid #fc455c; width: 600px;">
+    <thead>
+    <tr style="background-color:#fc455c;border: 1px solid #fc455c;">
+    <th style="color:white;">Nombre</th>
+    <th align="center" style="color:white;">FC</th>
+    <th align="center" style="color:white;">CE</th>
+    </tr>
+    </thead>
+    <tbody>';
+
+    for ($i = 0; $i < count($cursos_basica); $i++) { 
+        // FC= x  CE= y
+        $dat_cur_bas = $dat_cur_bas."<tr><td>".$cursos_basica[$i]['name']. "</td> <td align='center'>".$cursos_basica[$i]['x']."</td> <td align='center'>".$cursos_basica[$i]['y']."</td></tr>";
+    }
+    $dat_cur_bas = $dat_cur_bas."</tbody></table></center>";
+
+    $graficos_edu_bas = $graficos_edu_bas."".$dat_cur_bas;
+
+    $graficos_edu_med = '<br>
             <div class="subtitulos">'.$brechas_media.'</div>
             <br>
             <div style="width=100%;"><img src="'.$imagen_media.'"></div>
             </center>
         </div>
     </div>';
+
+    $dat_cur_med = '<br><br><div class="subtitulos" style="width: 650px; margin-left: auto; margin-right: auto;">Detalle Educación Media</div><br><center><table  style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: 1px solid #fc455c; width: 600px;">
+    <thead>
+    <tr style="background-color:#fc455c;border: 1px solid #fc455c;">
+    <th style="color:white;">Nombre</th>
+    <th align="center" style="color:white;">FC</th>
+    <th align="center" style="color:white;">CE</th>
+    </tr>
+    </thead>
+    <tbody>';
+
+    for ($i = 0; $i < count($cursos_media); $i++) { 
+        // FC= x  CE= y
+        $dat_cur_med = $dat_cur_med."<tr><td>".$cursos_media[$i]['name']. "</td> <td align='center'>".$cursos_media[$i]['x']."</td> <td align='center'>".$cursos_media[$i]['y']."</td></tr>";
+    }
+    $dat_cur_med = $dat_cur_med."</tbody></table></center>";
+
+    $graficos_edu_med = $graficos_edu_med."".$dat_cur_med;
+
+    $graficos_edu = $graficos_edu_bas." <br> ".$graficos_edu_med;
 }
+
+
+
  
 $mpdfConfig = array(
   'mode' => 'utf-8', 

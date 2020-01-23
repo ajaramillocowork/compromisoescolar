@@ -12,13 +12,13 @@ if (isset($_SESSION['user'])) {
         </head>
 <body style="background: #418bcc;">
 	<!-- Menu-->
-	<nav class="navbar navbar-light">
-		<a class="navbar-brand" href="#"><img src="assets/img/logo.png" /></a>
+	<nav class="navbar navbar-light" style="background-color: white">
+		<a class="navbar-brand" href="/modulos.php"><img src="assets/img/logo_compromiso_escolar.png" /></a>
 		<span class="navbar-text"><a href="salir.php"><img
 				src="assets/img/salir.png"></a></span>
 	</nav>
 	<!--Fin Menu-->
-	<div class="container">
+	<div class="container" style="padding-top: 2rem">
 		<div class="row mb-3">
 			<div class="text-center">
 				<h4 class="text-white">Gestión de Establecimientos</h4>
@@ -71,7 +71,7 @@ if (isset($_SESSION['user'])) {
 
 							</div>
 							<div class="col-md-4">
-									   <label for=""> Pais Establecimiento:</label> 	
+									   <label for=""> País Establecimiento:</label>
 									   <select name="sel_country_id" id="sel_country_id" class="form-control mb-3" >
                                         <?php echo select_pais();?>                
                                     </select>					

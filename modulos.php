@@ -9,13 +9,12 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title></title>
-        <?php
-
-include "assets/css/css.php";
-
+    <head>
+    <meta charset="utf-8">
+    <link rel=”shortcut icon” type=”image/png” href=”assets/img/favicon.png”/>
+    <title></title>
+    <?php
+        include "assets/css/css.php";
     ?>
 <style type="text/css">
     	.btn_cuadrado:hover { 
@@ -31,8 +30,8 @@ include "assets/css/css.php";
     </head>
 <body style="background: #418bcc;">
 	<!-- Menu-->
-	<nav class="navbar navbar-light">
-		<a class="navbar-brand" href="#"><img src="assets/img/logo.png" /></a>
+	<nav class="navbar navbar-light" style="background-color: white">
+		<a class="navbar-brand" href="/modulos.php"><img src="assets/img/logo_compromiso_escolar.png" /></a>
 		<span class="navbar-text"><a href="salir.php"><img
 				src="assets/img/salir.png"></a></span>
 	</nav>
@@ -74,7 +73,7 @@ include "assets/css/css.php";
 
 Puedes crear los token de acceso a los alumnos(as) a la encuesta, administrar los usuarios que acceden a reportes y crear los cursos participantes. 
 
-Todos los datos ingresados a este módulo se van relacionando de manera de tener un ùnico repositorio de claves de acceso y personas que están participando de la  información que entrega la plataforma de compromiso escolar.</p>
+Todos los datos ingresados a este módulo se van relacionando de manera de tener un único repositorio de claves de acceso y personas que están participando de la  información que entrega la plataforma de compromiso escolar.</p>
 
 				</div>
 				
@@ -107,11 +106,11 @@ Todos los datos ingresados a este módulo se van relacionando de manera de tener
                 
 				<?php  if( $tipo_usuario == 4){?>
 					<div class="centrado">
-			<div class="row">
+			<div class="row" style="padding-top: 12rem">
 			<div class="col-md-6 hvr hvr-grow mb-2" id="lista_establecimientos">
-					<div class="cuadrado-modulos">
+					<div class="cuadrado-modulos" style="cursor: pointer">
 					<i class="fa fa-pie-chart fa-3x center-icono text-success" aria-hidden="true"></i>						
-						<p>Establecimientos</p> 
+						<p>Establecimientos</p>
 					</div>
 				</div>
 				<div class="col-md-6  hvr hvr-grow mb-2" id="editar_preguntas">
@@ -149,7 +148,7 @@ Todos los datos ingresados a este módulo se van relacionando de manera de tener
 
 Puedes crear los token de acceso a los alumnos(as) a la encuesta, administrar los usuarios que acceden a reportes y crear los cursos participantes. 
 
-Todos los datos ingresados a este módulo se van relacionando de manera de tener un ùnico repositorio de claves de acceso y personas que están participando de la  información que entrega la plataforma de compromiso escolar.</p>
+Todos los datos ingresados a este módulo se van relacionando de manera de tener un único repositorio de claves de acceso y personas que están participando de la  información que entrega la plataforma de compromiso escolar.</p>
 
 				</div>
 				
@@ -178,14 +177,14 @@ Todos los datos ingresados a este módulo se van relacionando de manera de tener
 		
 				<?php  if( $tipo_usuario == 4){?>
 					<div class="centrado">
-			<div class="row">
+			<div class="row" style="padding-top: 12rem">
 			<div class="col-md-6 hvr hvr-grow mb-2" id="lista_establecimientos">
-					<div class="cuadrado-modulos">
+					<div class="cuadrado-modulos" style="cursor: pointer">
 					<i class="fa fa-pie-chart fa-3x center-icono text-success" aria-hidden="true"></i>						
 						<p>Establecimientos</p> 
 					</div>
 				</div>
-				<div class="col-md-6  hvr hvr-grow mb-2" id="editar_preguntas">
+				<div class="col-md-6  hvr hvr-grow mb-2" id="editar_preguntas" hidden="true">
 				<div class="cuadrado-modulos">
 				<i class="fa fa-tasks fa-3x center-icono text-success" aria-hidden="true"></i>						
 						<p>Edición de Preguntas</p> 

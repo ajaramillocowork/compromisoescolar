@@ -18,7 +18,7 @@
     <th>Afectivo</th>
     <th>Conductual</th>
     <th>Cognitivo</th>
-    <th>Apoyo Familiar</th>
+    <th>Apoyo Familia</th>
     <th>Apoyo Profesores</th>
     <th>Apoyo Pares</th>
   </tr>  
@@ -431,7 +431,7 @@ Highcharts.chart('grafico_apoyo_familiar_curso', {
         type: 'pie'
     },
     title: {
-        text: 'Apoyo Familiar'
+        text: 'Apoyo Familia'
     },
      
     credits: {

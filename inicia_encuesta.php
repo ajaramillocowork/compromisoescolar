@@ -141,7 +141,7 @@
                         </td>
                         <td align="left" valign="center"  width="50%" style="padding-left: 30px; padding-top: 40px;">
                             <div id="styled_video_container">
-                                <video src="assets/video/promocion.mp4" type="video/mp4" controls poster="assets/img/img_video.png" id="styled_video" preload="metadata" loop>
+                                <video src="assets/video/promocion.mp4" type="video/mp4" controls poster="assets/img/promocion_poster.png" id="styled_video" preload="metadata" loop>
                             </div>
                         </td>
                     </tr>
@@ -169,10 +169,6 @@
                                 <img style="margin-right: 5px;" width="44" src="assets/img/mineduc.png">
                                 <img style="margin-right: 5px;" width="120" src="assets/img/fondef.png">
                                 <img style="margin-right: 5px;" width="110" src="assets/img/corfo.png">
-                            </div>
-                        </td>
-                        <td align="center" valign="center">
-                            <div style="display: flex; align-items: baseline; text-align: center; vertical-align: middle; top: 0; bottom: 0;">
                                 <img style="margin-right: 5px; padding-top: 5px;" width="60" src="assets/img/ufro.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="100" src="assets/img/autonoma.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="160" src="assets/img/fund_telefonica.png">

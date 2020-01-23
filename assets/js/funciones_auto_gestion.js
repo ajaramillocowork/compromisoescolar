@@ -398,7 +398,7 @@ function validar_extension() {
                             $("#file").val('');
                         }
                         else if(extension.estado === "3"){
-                            alertify.alert("Notificación","Algunos campos el archivo se encuentran vacios");
+                            alertify.alert("Notificación","Algunos campos el archivo se encuentran vacíos");
                             $("#file").val('');
                         }
                         else if(extension.estado === "4"){
@@ -910,50 +910,55 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
                            
                          },
                          success: function(response){
-                             console.log(response);
-                           var respuesta = (JSON.parse(response));
-                           if(respuesta.estado === "1"){
-                            $("#boton_subir_excel").attr('disabled', false);
-                               $('#file').val('');
-                            alertify.set('notifier','position', 'center-top');
-                            alertify.success("<div class='text-white text-center'>Carga Existosa</div>");
-                               document.getElementById("dowload").innerHTML = (respuesta.archivo);
-                               $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
-                           
-                           }
-                           else if(respuesta.estado === "0"){
-                            $("#boton_subir_excel").attr('disabled', false);
-                               $('#file').val('');
-                               document.getElementById("dowload").innerHTML = ('');
-                            alertify.set('notifier','position', 'center-top');
-                            alertify.error("<div class='text-white text-center'>Error al realizar la carga</div>");
-                            $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
-                           
-                           }
-                           else if(respuesta.estado === "2"){
-                            $("#boton_subir_excel").attr('disabled', false);
-                               $('#file').val('');
-                               document.getElementById("dowload").innerHTML = ('');
-                            alertify.set('notifier','position', 'center-top');
-                            alertify.error("<div class='text-white text-center'>La carga asociada al docente ya se a realizado</div>");
-                              
-                            $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
-                           }
-                           else if(respuesta.estado === "3"){
-                            $("#boton_subir_excel").attr('disabled', false);
-                               $('#file').val('');
-                               document.getElementById("dowload").innerHTML = ('');
-                            alertify.set('notifier','position', 'center-top');
-                            alertify.error("<div class='text-white text-center'>Ya se encuentran registros de estudiantes a registrar</div>");
-                            $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
-                           
-                           }
-                          
-                
-                         }
-                            })
+                            console.log(response)
+                            if(response.includes('Invalid datetime format')) {
+                                alertify.set('notifier','position', 'center-top');
+                                alertify.success("<div class='text-white text-center'>Las fechas de nacimiento pueden contener caracteres no válidos (Formato debe ser dd-mm-yyyy)</div>");
 
-                           }                         
+                                setTimeout(function(){ window.location.reload() }, 3000);
+                                return;
+                            }
+                            var respuesta = (JSON.parse(response));
+
+                            if(respuesta.estado === "1") {
+                                $("#boton_subir_excel").attr('disabled', false);
+                                $('#file').val('');
+                                alertify.set('notifier','position', 'center-top');
+                                alertify.success("<div class='text-white text-center'>Carga Existosa</div>");
+                                document.getElementById("dowload").innerHTML = (respuesta.archivo);
+                                $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
+                            }
+                            else if(respuesta.estado === "0") {
+                                $("#boton_subir_excel").attr('disabled', false);
+                                $('#file').val('');
+                                document.getElementById("dowload").innerHTML = ('');
+                                alertify.set('notifier','position', 'center-top');
+                                alertify.error("<div class='text-white text-center'>Error al realizar la carga</div>");
+                                $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
+                            }
+                            else if(respuesta.estado === "2"){
+                                $("#boton_subir_excel").attr('disabled', false);
+                                $('#file').val('');
+                                document.getElementById("dowload").innerHTML = ('');
+                                alertify.set('notifier','position', 'center-top');
+                                alertify.error("<div class='text-white text-center'>La carga asociada al docente ya se ha realizado</div>");
+
+                                $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
+                            }
+                            else if(respuesta.estado === "3"){
+                                $("#boton_subir_excel").attr('disabled', false);
+                                $('#file').val('');
+                                document.getElementById("dowload").innerHTML = ('');
+                                alertify.set('notifier','position', 'center-top');
+                                alertify.error("<div class='text-white text-center'>Ya se encuentran registros de estudiantes a registrar</div>");
+                                $("#curso_establecimiento_selec").load("lista_curso_establecimientos.php");
+                            }
+                        },
+                        onError: function(response) {
+                           console.log('error: ', response);
+                        },
+                    })
+                }
                                                    
                                 
                         });
@@ -984,8 +989,10 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
                                var respuesta = (JSON.parse(response));
                             if(respuesta.estado === "1"){                                
                                     alertify.success("<div class='text-white text-center'>Establecimiento Guardado Exitosamente</div>");
-                                    $('#estable_lista').load("php/lista_establecimientos.php");                                
-                                
+                                    $('#estable_lista').load("php/lista_establecimientos.php");
+                                    $("#myModal").modal('hide');//ocultamos el modal
+                                    $('body').removeClass('modal-open');//eliminamos la clase del body para poder hacer scroll
+                                    $('.modal-backdrop').remove();
     
                             }else if(respuesta.estado === "0"){
                                 alertify.error("<div class='text-white text-center'>El establecimiento ya esta registrado</div>");
@@ -999,12 +1006,9 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 
                              }
                 , function(){
-                    
                 });
-                          
-                                
-                        });
-                    });
+                });
+                });
                 })
             }
 

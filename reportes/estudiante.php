@@ -295,6 +295,29 @@
 
         
     </style>
+    <style>
+        .loader {
+            position: absolute;
+            left: calc(50% + 15px);
+            background: transparent;
+          border: 16px solid #99CC99;
+          border-radius: 50%;
+          border-top: 16px solid #3498DB;
+          width: 60px;
+          height: 60px;
+          -webkit-animation: spin 1s linear infinite; /* Safari */
+          animation: spin 1s linear infinite;
+        }
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini" style="background: #BDC3C7; ">
     <div id="linea-superior" style="background: #40c2d4; padding-left: 100px; "> 
@@ -529,7 +552,7 @@
                                         <h4><b>Factores Contextuales</b></h4></div>
                                     <div class="panel-body">
                                         <ul class="nav nav-pills">
-                                            <li class="active"><a data-toggle="pill" href="#dimension_familia">Apoyo Familiar</a></li>
+                                            <li class="active"><a data-toggle="pill" href="#dimension_familia">Apoyo Familia</a></li>
                                             <li><a data-toggle="pill" href="#dimension_pares">Apoyo Pares</a></li>
                                             <li><a data-toggle="pill" href="#dimension_profesores">Apoyo Profesores</a></li>
                                         </ul>
@@ -796,20 +819,22 @@
                             </div>
                             <!-- /.row -->
                             <!-- Main row -->
-
+                    <div class="loader" id="loading_flag"></div>
                             <div class="col-md-12" id="selector_est">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div id="selector_estudiantes" class="col-xs-6">
                                             <label>Seleccione un Estudiante <i class="fa fa-user"></i>:</label>
-                                            <select name="sle_estudiantes" id="sle_estudiantes" class="form-control">
+                                            <select onchange="E_seleccionado(this)" name="sle_estudiantes" id="sle_estudiantes" class="form-control">
                                                 <?php
-                                                        select_estudiantes_por_curso($tipo["id_ce_docente"]);
+                                                  select_estudiantes_por_curso($tipo["id_ce_docente"]);
                                                     ?>
                                             </select>
                                         </div>
+
                                     </div>
                                 </div>
+
                             </div>
                             <div id="recibe_resultados_estudiantes_2">
 
@@ -830,10 +855,6 @@
                                 <img style="margin-right: 5px;" width="44" src="../assets/img/mineduc.png">
                                 <img style="margin-right: 5px;" width="120" src="../assets/img/fondef.png">
                                 <img style="margin-right: 5px;" width="110" src="../assets/img/corfo.png">
-                            </div>
-                        </td>
-                        <td align="center" valign="center">
-                            <div style="display: flex; align-items: baseline; text-align: center; vertical-align: middle; top: 0; bottom: 0;">
                                 <img style="margin-right: 5px; padding-top: 5px;" width="60" src="../assets/img/ufro.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="100" src="../assets/img/autonoma.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="160" src="../assets/img/fund_telefonica.png">
@@ -928,6 +949,7 @@
     <?php include "partes/graficos_curso.php"; ?>
     <script>
         sesion();
+        window.flag_load = true;
         var url_base = window.location;
         var flag_menu = 1;
         var flag_sbar = 1;
@@ -1022,13 +1044,7 @@
             }, 
             fewSeconds * 1000
             );
-
-
-            
         });
-
-        
-
 
         $("#btn_curso").ready(function () {
             $("#btn_curso").attr("disabled", "true");
@@ -1041,8 +1057,30 @@
             }, 
             5000
             );
+
+            $("#loading_flag").hide();
         });
+
+        
+        function E_seleccionado(argument) {
+            $("#loading_flag").show();
+        }
         $(document).ready(function () {
+            if (window.hasOwnProperty("estudiante_seleccionado")) {
+                $('#sle_estudiantes2 option').eq(
+                    window.estudiante_seleccionado
+                ).prop(
+                    'selected', 
+                    true
+                );
+
+                $('#sle_estudiantes option').eq(
+                    window.estudiante_seleccionado
+                ).prop(
+                    'selected', 
+                    true
+                );
+            }
             $("#selector_estudiantes").css("display", "none");
             var combo = document.getElementById("sle_estudiantes");
             var selected = combo.options[combo.selectedIndex].value;
@@ -1095,7 +1133,7 @@
                 window.location.replace(
                     url_base.protocol + "//" + 
                     url_base.host + "/" + 
-                    "recursos.php"
+                    "recursos_edu.php"
                 );
             });
 

@@ -354,7 +354,7 @@
                     </div>
                 </td> 
                 <td align="left" >
-                    <h3 style="color: white;">Módulo de Resultados</h3>
+                    <h3 style="color: white;">Módulo de Recursos Educativos</h3>
                 </td>
                 <td align="right" width="50%">
                     <table width="100%">
@@ -404,22 +404,28 @@
                                 <ul class="treeview-menu" id="t-menu-1">
                                     <li style='padding: 5px; margin-left: 0;' class="">
                                         <a id="select_curso" href="#">
-                                            Enlaces periodísticos
+                                            Desafío para la educación
                                             <input class="i-menu" value="1" hidden>
                                         </a>
                                     </li>
-                                    <li style='padding: 5px; margin-left: 0;'  class="">
-                                        <!-- estudiante.php -->
-                                        <a id="" href="#">
-                                            Videos y Presentaciones
+                                    <li style='padding: 5px; margin-left: 0;' class="">
+                                        <a id="select_curso" href="#">
+                                            Enlaces periodísticos
                                             <input class="i-menu" value="2" hidden>
                                         </a>
                                     </li>
                                     <li style='padding: 5px; margin-left: 0;'  class="">
                                         <!-- estudiante.php -->
                                         <a id="" href="#">
-                                            Artículos Científicos
+                                            Videos y Presentaciones
                                             <input class="i-menu" value="3" hidden>
+                                        </a>
+                                    </li>
+                                    <li style='padding: 5px; margin-left: 0;'  class="">
+                                        <!-- estudiante.php -->
+                                        <a id="" href="#">
+                                            Artículos Científicos
+                                            <input class="i-menu" value="4" hidden>
                                         </a>
                                     </li>
 
@@ -523,13 +529,13 @@
                                         <table width="100%" style="">
                                             <tr align="center" valign="top" >
                                                 <td valign="center" align="center" style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
-                                                    <a href="#" download="" id="btn_descargar">
+                                                    <a id="btn_descargar" style="cursor: pointer">
                                                         Descargar  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
                                                         <i class="fa fa-download"></i>
                                                     </a>
                                                 </td>
                                                 <td align="center">
-                                                    <img id='id_tipo' src='assets/img/pdf.png' style='width: 50px; padding-bottom: 10px;'>
+                                                    <img id='id_tipo' src='assets/img/ppt.png' style='width: 50px; padding-bottom: 10px;'>
                                                 </td>
                                             </tr>
                                         </table>
@@ -552,10 +558,6 @@
                                 <img style="margin-right: 5px;" width="44" src="assets/img/mineduc.png">
                                 <img style="margin-right: 5px;" width="120" src="assets/img/fondef.png">
                                 <img style="margin-right: 5px;" width="110" src="assets/img/corfo.png">
-                            </div>
-                        </td>
-                        <td align="center" valign="center">
-                            <div style="display: flex; align-items: baseline; text-align: center; vertical-align: middle; top: 0; bottom: 0;">
                                 <img style="margin-right: 5px; padding-top: 5px;" width="60" src="assets/img/ufro.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="100" src="assets/img/autonoma.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="160" src="assets/img/fund_telefonica.png">
@@ -667,10 +669,11 @@
             );
 
             if(extension != "pdf" && extension != "mp4") {
+                /*$("#btn_descargar").removeAttr("download");
                 $("#btn_descargar").attr(
-                    "download",
+                    "href",
                      archivos[1][id_fol]
-                );
+                );*/
             } else {
                 $("#btn_descargar").removeAttr("download");
             }
@@ -679,11 +682,14 @@
 
         function GetIdFold(id_f) {
             id_fol = id_f;
+            console.log('id_fol: ' + id_fol)
             fil_descargar = url_base.protocol + "//" + 
             url_base.host + "/" + 
             archivos[1][id_f];
+            console.log('archivos: ' + archivos);
             console.log("aqui: " + fil_descargar);
             var extension = (fil_descargar + "").split("/");
+            console.log('extension: ' + extension);
             extension = extension[extension.length - 1].split(".")[1];
             CambiaTipo(extension);
             console.log("fin: " + extension);
@@ -703,8 +709,8 @@
           
         $(document).ready(function () {
             $("#titulo_div").empty();
-            var sel_menu = 0;
-            var sel_sub_menu = 0;
+            var sel_menu = 2;
+            var sel_sub_menu = 1;
 
             $("#t-menu-1").slideToggle("fast");
             $("#t-menu-2").slideUp("fast");
@@ -731,10 +737,10 @@
                         sub_folder: sel_sub_menu
                     }, success: function(data) {
                         $("#id_archivos").empty();
-                        
+                        console.log('sel_menu: ', sel_menu,' - sel_sub_menu: ', sel_sub_menu);
                         archivos = JSON.parse(data);
                         var tab = "";
-                        console.log(archivos);
+                        console.log('archivos: ',archivos);
 
                         tab += "<tr align='center' valign='center' class='id_filas' >";
                         $("#id_view_pdf").attr("src", archivos[0][0]);

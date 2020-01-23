@@ -13,13 +13,13 @@ if(isset($_SESSION['user'])){
     </head>
     <body style="background: #418bcc;">
         <!-- Menu-->
-        <nav class="navbar navbar-light">
-            <a class="navbar-brand" href="#"><img src="assets/img/logo.png"/></a>
+        <nav class="navbar navbar-light" style="background-color: white">
+            <a class="navbar-brand" href="/modulos.php"><img src="assets/img/logo_compromiso_escolar.png"/></a>
             <span class="navbar-text"><a href="salir.php"><img src="assets/img/salir.png"></a></span>
             
         </nav>
         <!--Fin Menu-->
-        <div class="container">
+        <div class="container" style="padding-top: 2rem">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="" id="home-tab" data-toggle="tab" href="#listaalumnos" role="tab" aria-controls="home" aria-selected="true">Lista</a>
@@ -29,7 +29,7 @@ if(isset($_SESSION['user'])){
                 </li>     
 
                 <li class="nav-item">
-                    <a class="" href="modulos"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</a>
+                    <a class="" href="/modulos.php"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</a>
                 </li>                   
             </ul> 
          
@@ -94,12 +94,12 @@ if(isset($_SESSION['user'])){
                             </div>
                             <div class="col-md-3">
                                 <div class="excel">
-                                    <a href="descarga_archivo.php" class="text-white">Descargar Excel de Ejemplo</a>
+                                    <a href="/assets/img/imagen_ejemplo_xlsx.png" target="_blank" class="text-white">Descargar Excel de ejemplo</a>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="excel">
-                                    <a href="descarga_archivo_llenar.php" class="text-white">Descargar Excel Recepción de Datos</a>
+                                    <a href="descarga_archivo_llenar.php" class="text-white">Descargar Excel recepción de datos</a>
                                 </div>
                             </div>
 
@@ -112,22 +112,22 @@ if(isset($_SESSION['user'])){
                         <div class="col-md-4">
                             <div class="pasos">
                                 <h4>Paso 1</h4>
-                                <p>-Descargar Archivo Excel de Ejemplo</p>
-                                <p>-Descargar Archivo Excel recepción de datos</p>
+                                <p>- Descargar archivo Excel de ejemplo</p>
+                                <p>- Descargar archivo Excel recepción de datos</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="pasos">
                                 <h4>Paso 2</h4>
-                                <p>-Completar el archivo Excel Para llenar </p>
+                                <p>- Completar el archivo Excel para llenar </p>
                                 <p>-</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="pasos">
                                 <h4>Paso 3</h4>
-                                <p>- Subimos el archivo completado con el boton 'Seleccionar archivo'</p>
-                                <p>-Presionamos el Boton 'Cargar'</p>
+                                <p>- Subir el archivo completado con el botón "Seleccionar archivo"</p>
+                                <p>- Presionar el botón "Cargar"</p>
                                
                             </div>
                         </div>

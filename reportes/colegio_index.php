@@ -472,9 +472,14 @@
                             <div class="col-xs-12">
                                 <div class="panel panel-info">
                                     <div class="panel-heading">
-                                        <h4><?php echo $establecimiento['ce_establecimiento_nombre'] ?></h4>
+                                        <h4>Gráfico de Dispersión</h4>
                                     </div>
-                                    <div class="panel-body" id="id_graficos_p">
+                                    <div class="panel-body">
+                                        <div>
+                                            <span>
+                                                <p style="font-size: 20px; text-align: center">Reporte Establecimiento <i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_cuadrantes()"></i></p>
+                                            </span>
+                                        </div>
                                         <div id="id_graficos_b">
                                             <div id="dispersion-establecimiento-basica" style="min-width: 310px; height: 500px; margin: 0 auto" <?php echo $hidden_basica; ?> >
                                             </div>
@@ -505,10 +510,6 @@
                                 <img style="margin-right: 5px;" width="44" src="../assets/img/mineduc.png">
                                 <img style="margin-right: 5px;" width="120" src="../assets/img/fondef.png">
                                 <img style="margin-right: 5px;" width="110" src="../assets/img/corfo.png">
-                            </div>
-                        </td>
-                        <td align="center" valign="center">
-                            <div style="display: flex; align-items: baseline; text-align: center; vertical-align: middle; top: 0; bottom: 0;">
                                 <img style="margin-right: 5px; padding-top: 5px;" width="60" src="../assets/img/ufro.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="100" src="../assets/img/autonoma.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="160" src="../assets/img/fund_telefonica.png">
@@ -781,7 +782,7 @@
             ...defaultOptions,
 
             title: {
-                text: 'Reporte Establecimiento Basica (<?php echo $totalParticipantesBasica?>)'
+                text: null
             },
 
             series: [{

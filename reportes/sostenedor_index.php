@@ -412,7 +412,6 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                         <tr width="100%">
                             <td align="right" width="50%">
                                 <h3 style="color: white;"><?php echo $_SESSION["profesor_nombres"];?></h3>
-                       
                             </td>
                             <td align="right" width="50%">
                                 <button id="btn_cerrar_session" style="text-decoration: none; background: transparent; width: 100%; height: 100%;  background-repeat: no-repeat; border-radius: 35px; border: none; cursor:pointer; overflow: hidden; outline:none; background-position: center;">
@@ -494,13 +493,18 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                                             <tbody>
                                                 <tr valign="center">
                                                     <td style="padding-left: 10px; font-weight: bold;" align="left" width="100%">
-                                                        <h4><strong>Grafica de Dispersión (Basica)</strong></h4>
+                                                        <h4><strong>Gráfico de Dispersión</strong></h4>
                                                     </td>
                                                 </tr>      
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="panel-body">
+                                        <div>
+                                            <span>
+                                                <p style="font-size: 20px; text-align: center">Reporte Sostenedor <i class="fa fa-question-circle" style="color:#2d6693; font-size: 20px" aria-hidden="true" onclick="definicion_cuadrantes()"></i></p>
+                                            </span>
+                                        </div>
                                         <div class="table-responsive mt-4" style="margin-top: 0; padding-top: 0;">
                                             <div id="dispersion-sostenedor-basica" style="width: 100%; padding: 0; height: 500px; margin: 0 auto">
                                                 
@@ -520,7 +524,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                                                 <tr valign="center">
                                                     <td style="padding-left: 10px; font-weight: bold;" align="left" width="100%">
                                                         <h4>
-                                                            <strong>Grafica de Dispersión (Media)</strong>
+                                                            <strong>Grafica de Dispersión</strong>
                                                         </h4>
                                                     </td>
                                                 </tr>      
@@ -559,10 +563,6 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                                 <img style="margin-right: 5px;" width="44" src="../assets/img/mineduc.png">
                                 <img style="margin-right: 5px;" width="120" src="../assets/img/fondef.png">
                                 <img style="margin-right: 5px;" width="110" src="../assets/img/corfo.png">
-                            </div>
-                        </td>
-                        <td align="center" valign="center">
-                            <div style="display: flex; align-items: baseline; text-align: center; vertical-align: middle; top: 0; bottom: 0;">
                                 <img style="margin-right: 5px; padding-top: 5px;" width="60" src="../assets/img/ufro.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="100" src="../assets/img/autonoma.png">
                                 <img style="margin-right: 5px; padding-bottom: 4px;" width="160" src="../assets/img/fund_telefonica.png">
@@ -624,7 +624,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
     var des_flag = false;
     const defaultOptions = {
         title: {
-            text: 'Reporte Sostenedor Básica (<?php echo $totalParticipantesBasica?>)'
+            text: null,
         },
 
         chart: {
@@ -710,7 +710,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
     }
 
     const labels = function (chart) {
-        chart.renderer.label('Alto compromiso escolar y Factores contextuales', window.value - 200, 40)
+        chart.renderer.label('Alto compromiso escolar y factores contextuales', window.value - 200, 40)
             .attr({
                 fill: 'rgb(206, 225, 255)',
                 padding: 1,
@@ -722,7 +722,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                 border: '10px'
             })
             .add();
-        chart.renderer.label('Alto compromiso escolar y bajos Factores contextuales', 70, 40)
+        chart.renderer.label('Alto compromiso escolar y bajos factores contextuales', 70, 40)
             .attr({
                 fill: 'rgb(206, 225, 255)',
                 padding: 1,
@@ -734,7 +734,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                 width: '200px'
             })
             .add();
-        chart.renderer.label('Bajo compromiso escolar y bajos Factores contextuales', 70, 390)
+        chart.renderer.label('Bajo compromiso escolar y bajos factores contextuales', 70, 390)
             .attr({
                 fill: 'rgb(206, 225, 255)',
                 padding: 1,
@@ -746,7 +746,7 @@ $totalParticipantesMedia = array_reduce($establecimientos_media, function($accum
                 width: '200px'
             })
             .add();
-        chart.renderer.label('Bajo compromiso escolar y Altos Factores contextuales', window.value - 200, 390)
+        chart.renderer.label('Bajo compromiso escolar y altos Factores contextuales', window.value - 200, 390)
             .attr({
                 fill: 'rgb(206, 225, 255)',
                 padding: 1,
