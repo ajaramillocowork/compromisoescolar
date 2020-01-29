@@ -1,0 +1,32 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    
+    root /usr/share/nginx/nombre_directorio;
+    index index.php;
+
+    server_name dominio;
+
+    location / {
+            try_files $uri $uri/ /index.php;
+    }
+
+    location ~ \.php$ {
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+            fastcgi_index index.php;
+            include fastcgi.conf;
+    }
+
+    location ~ /\. {
+            deny all;
+    }
+
+    location ~ \.css {
+        add_header  Content-Type    text/css;
+    }
+    location ~ \.js {
+        add_header  Content-Type    application/x-javascript;
+    }
+}
+
